@@ -22,8 +22,10 @@ class RacingSeries(Base):
 
     name = models.CharField(max_length=32, null=False)
     # team = models.ForeignKey(Team, blank=True, on_delete=models.CASCADE)
-
-
+    class META:
+        verbose_name_plural = "Racing Series"
+        # verbose_name = "Racing Series"
+        label = "Racing Series"
 class Team(Base):
     def __str__(self) -> str:
         return f"{self.name} - {self.series.name}"
@@ -93,7 +95,7 @@ class AutoManufacturer(Base):
         return self.name
 
 
-class RaceResults(Base):
+class RaceResult(Base):
     """One Race One Driver"""
 
     def __str__(self) -> str:

@@ -7,7 +7,7 @@ from nascar.models import (
     AutoManufacturer,
     Person,
     Race,
-    RaceResults,
+    RaceResult,
     RacingSeries,
     Role,
     Team,
@@ -39,7 +39,8 @@ class RaceAdmin(admin.ModelAdmin):
 
 @admin.register(RacingSeries)
 class RacingSeriesAdmin(admin.ModelAdmin):
-    pass
+    display_name = "Racing Series"
+
 
 
 class PersonInLine(admin.TabularInline):
@@ -60,7 +61,7 @@ class TrackAdmin(admin.ModelAdmin):
         return format_html("<a href='{url}'>{url}</a>", url=instance.website)
 
 
-@admin.register(RaceResults)
+@admin.register(RaceResult)
 class RaceResultsAdmin(admin.ModelAdmin):
     list_display = ["race", "driver", "track_name", "race_date"]
     list_filter = ["race_id", "driver"]
