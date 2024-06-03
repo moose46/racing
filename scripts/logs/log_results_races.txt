@@ -1,0 +1,6 @@
+2024-06-03 10:25:37,698 - INFO - C:\Users\me\Documents\VisualCodeSource\racing\scripts\results
+2024-06-03 10:25:37,700 - INFO - user=admin
+2024-06-03 10:25:37,700 - INFO - 
+Processing File=results_st louis_06-02-2024_.csv
+2024-06-03 10:25:37,708 - INFO - race_id=3
+2024-06-03 10:25:37,709 - CRITICAL - count=1

@@ -42,13 +42,13 @@ class RacingSeriesAdmin(admin.ModelAdmin):
     display_name = "Racing Series"
 
 
-
 class PersonInLine(admin.TabularInline):
     model = Person.team.through
 
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
+    list_filter = ["role"]
     inlines = [PersonInLine]
     exclude = ["team"]
 
@@ -63,7 +63,7 @@ class TrackAdmin(admin.ModelAdmin):
 
 @admin.register(RaceResult)
 class RaceResultsAdmin(admin.ModelAdmin):
-    list_display = ["race", "driver", "track_name", "race_date"]
+    list_display = ["race", "driver", "finish_pos", "track_name", "race_date"]
     list_filter = ["race_id", "driver"]
 
     def track_name(self, instance):
