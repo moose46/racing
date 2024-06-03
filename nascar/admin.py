@@ -3,7 +3,16 @@ from atexit import register
 from django.contrib import admin
 from django.utils.html import format_html
 
-from nascar.models import AutoManufacturer, Person, Race, RaceDriver, Role, Team, Track
+from nascar.models import (
+    AutoManufacturer,
+    Person,
+    Race,
+    RaceResults,
+    RacingSeries,
+    Role,
+    Team,
+    Track,
+)
 
 # Register your models here.
 
@@ -16,6 +25,7 @@ class AutoManufacturerAdmin(admin.ModelAdmin):
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ["name", "show_website"]
+    list_filter = ["series"]
     ordering = ["name"]
 
     def show_website(self, instance):
@@ -27,7 +37,21 @@ class RaceAdmin(admin.ModelAdmin):
     list_display = ["name", "track"]
 
 
+@admin.register(RacingSeries)
+class RacingSeriesAdmin(admin.ModelAdmin):
+    pass
+
+
+class PersonInLine(admin.TabularInline):
+    model = Person.team.through
+
+
 @admin.register(Person)
+class PersonAdmin(admin.ModelAdmin):
+    inlines = [PersonInLine]
+    exclude = ["team"]
+
+
 @admin.register(Track)
 class TrackAdmin(admin.ModelAdmin):
     list_display = ["name", "show_website"]
@@ -36,8 +60,8 @@ class TrackAdmin(admin.ModelAdmin):
         return format_html("<a href='{url}'>{url}</a>", url=instance.website)
 
 
-@admin.register(RaceDriver)
-class RaceDriversAdmin(admin.ModelAdmin):
+@admin.register(RaceResults)
+class RaceResultsAdmin(admin.ModelAdmin):
     list_display = ["race", "driver", "track_name", "race_date"]
     list_filter = ["race_id", "driver"]
 
