@@ -106,7 +106,7 @@ class RaceResult(Base):
         "Ford": "FORD",
         "Toyota": "TOYOTA",
     }
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    team = models.ForeignKey(Team, on_delete=models.CASCADE,null=True)
     race = models.ForeignKey(Race, on_delete=models.CASCADE)
     driver = models.ForeignKey(Person, on_delete=models.CASCADE)
     # manufacturer = models.CharField(

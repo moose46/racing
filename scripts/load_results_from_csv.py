@@ -29,7 +29,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
-from nascar.models import Person, Race, RaceResult, Track
+from nascar.models import AutoManufacturer, Person, Race, RaceResult, Track,Role
 
 # https://k0nze.dev/posts/python-relative-imports-vscode/
 file_path = Path.cwd() / "scripts" / "results"
@@ -56,7 +56,29 @@ def check_if_race_is_already_loaded(race_date):
             results_data.delete()
     except Race.DoesNotExist as e:
         return False
-
+    
+def check_role_driver_exists():
+    """ see if the role driver exists, if not create driver and return role else return role driver"""
+    try:
+        role = Role.objects.get(name='Driver')
+        return role
+    except Role.DoesNotExist as e:
+        role = Role()
+        role.name = 'Driver'
+        role.save()
+        return role
+    return role
+def check_auto_manufacturer_exists(auto_manufacturer):
+    """ see if the manufacturer exists, if not create it and return manufacturer else return manufacturer"""
+    try:
+        manufacturer = AutoManufacturer.objects.get(name=auto_manufacturer)
+        return manufacturer
+    except AutoManufacturer.DoesNotExist as e:
+        manufacturer = AutoManufacturer()
+        manufacturer.name = auto_manufacturer
+        manufacturer.save()
+        return manufacturer
+    return manufacturer
 
 def run():
     logging.info(file_path)
@@ -90,6 +112,9 @@ def run():
                 for row in reader:
                     resultsInfo = ResultsInfo(*row)
                     # logging.critical(f"results={resultsInfo}")
+                    role = check_role_driver_exists()
+                    auto_manufacturer = check_auto_manufacturer_exists(resultsInfo.MANUFACTURER)
+                    logging.info(f'role={role}')
                     try:
                         # logging.info(f"results={resultsInfo.DRIVER}")
                         driver = Person.objects.get(name=resultsInfo.DRIVER)
@@ -100,6 +125,8 @@ def run():
                         driver.user = user
                         driver.name = resultsInfo.DRIVER
                         driver.save()
+                        driver.role.set([role])
+                        driver.save()
                         # results.driver = Driver.objects.get(name=Results.driver)
                     results = RaceResult()
                     results.user = user
@@ -108,7 +135,7 @@ def run():
                     results.car_no = resultsInfo.CAR
                     results.start_pos = resultsInfo.START
                     results.finish_pos = resultsInfo.POS
-                    results.manufacturer = resultsInfo.MANUFACTURER
+                    results.manufacturer = auto_manufacturer
                     results.save()
 
             # break
