@@ -1,5 +1,7 @@
+import string
 from atexit import register
 
+from adminsortable2.admin import SortableAdminMixin
 from django.contrib import admin
 from django.utils.html import format_html
 
@@ -10,6 +12,7 @@ from nascar.models import (
     RaceResult,
     RacingSeries,
     Role,
+    State,
     Team,
     Track,
 )
@@ -24,7 +27,7 @@ class AutoManufacturerAdmin(admin.ModelAdmin):
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ["name", "show_website"]
+    list_display = ["name", "series", "show_website"]
     list_filter = ["series"]
     ordering = ["name"]
 
@@ -34,7 +37,10 @@ class TeamAdmin(admin.ModelAdmin):
 
 @admin.register(Race)
 class RaceAdmin(admin.ModelAdmin):
-    list_display = ["name", "track"]
+    list_display = ["uname", "track", "race_date"]
+
+    def uname(self, instance):
+        return string.capwords(instance.name)
 
 
 @admin.register(RacingSeries)
@@ -55,16 +61,33 @@ class PersonAdmin(admin.ModelAdmin):
 
 @admin.register(Track)
 class TrackAdmin(admin.ModelAdmin):
-    list_display = ["name", "show_website"]
+    list_display = ["track_name", "state", "show_website"]
 
     def show_website(self, instance):
         return format_html("<a href='{url}'>{url}</a>", url=instance.website)
 
 
+@admin.register(State)
+class StateAdmin(admin.ModelAdmin):
+    list_display = ["state_name"]
+    list_filter = ("name",)
+
+
 @admin.register(RaceResult)
-class RaceResultsAdmin(admin.ModelAdmin):
-    list_display = ["race", "driver", "finish_pos", "track_name", "race_date"]
-    list_filter = ["race_id", "driver"]
+class RaceResultsAdmin(SortableAdminMixin, admin.ModelAdmin):
+    list_display = [
+        "race",
+        "driver_name",
+        "finish_pos",
+        "track_name",
+        "race_date",
+        "driver",
+    ]
+    list_filter = ("race__track__name", "race", "driver")
+    ordering = ["driver"]
+
+    def driver_name(self, instance):
+        return instance.driver.name  # "Ralf Hale"
 
     def track_name(self, instance):
         return instance.race.track  # "Peoria Motor Speedway"
