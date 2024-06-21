@@ -56,7 +56,7 @@ class PersonInLine(admin.TabularInline):
 class PersonAdmin(admin.ModelAdmin):
     list_filter = ["role"]
     inlines = [PersonInLine]
-    exclude = ["team"]
+    exclude = ["team", "slug"]
 
 
 @admin.register(Track)
@@ -94,6 +94,9 @@ class RaceResultsAdmin(SortableAdminMixin, admin.ModelAdmin):
 
     def race_date(self, instance):
         return instance.race.race_date
+
+    def team_name(self, instance):
+        return instance.driver.team.name
 
 
 @admin.register(Role)

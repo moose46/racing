@@ -8,6 +8,7 @@ from xml.dom import ValidationErr
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 from django.db import models
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -75,6 +76,21 @@ class Person(Base):
     name = models.CharField(max_length=32, default="", null=False, unique=True)
     website = models.URLField(null=True, blank=True)
     team = models.ManyToManyField(Team, blank=True)
+    slug = models.TextField(blank=True)
+
+    def save(
+        self, force_insert=False, force_update=False, using=None, update_fields=None
+    ):
+        self.slug = slugify(f"{self.name}")
+        print(self.slug)
+        if update_fields is not None and name in update_fields:
+            update_fields = {"slug"}.union(update_fields)
+        super().save(
+            force_insert=force_insert,
+            force_update=force_update,
+            using=using,
+            update_fields=update_fields,
+        )
 
     def __str__(self) -> str:
         return self.name
@@ -126,7 +142,7 @@ class Track(Base):
 class Race(Base):
     name = models.CharField(max_length=64)
     track = models.ForeignKey(Track, on_delete=models.CASCADE, null=True)
-    race_date = models.DateTimeField(null=True)
+    race_date = models.DateField(null=True)
     website = models.URLField(null=True, blank=True)
     laps = models.IntegerField(default=-1)
 

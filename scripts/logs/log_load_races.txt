@@ -1,0 +1,12 @@
+2024-06-20 15:55:36,808 - INFO - race=C:\Users\me\Documents\VisualCodeSource\racing\scripts\results\results_new hampshire_07-17-2023_.csv
+2024-06-20 15:55:36,809 - INFO - data.DATE=2023-07-17
+2024-06-20 15:55:36,809 - INFO - Finding New Hampshire Motor Speedway
+2024-06-20 15:55:36,809 - INFO - Found New Hampshire Motor Speedway ok!
+2024-06-20 15:55:36,810 - INFO - race=C:\Users\me\Documents\VisualCodeSource\racing\scripts\results\results_sonoma_06-09-2024_.csv
+2024-06-20 15:55:36,810 - INFO - data.DATE=2024-06-09
+2024-06-20 15:55:36,810 - INFO - Finding Sonoma Raceway
+2024-06-20 15:55:36,811 - INFO - Found Sonoma Raceway ok!
+2024-06-20 15:55:36,811 - INFO - race=C:\Users\me\Documents\VisualCodeSource\racing\scripts\results\results_st louis_06-02-2024_.csv
+2024-06-20 15:55:36,811 - INFO - data.DATE=2024-06-02
+2024-06-20 15:55:36,811 - INFO - Finding World Wide Technology Raceway
+2024-06-20 15:55:36,812 - INFO - Found World Wide Technology Raceway ok!

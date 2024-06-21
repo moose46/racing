@@ -1,21 +1,21 @@
 """
-    Reads drivers.csv file and imports races into the races table.
-    If there are duplicates, it will ignore duplicates
-    must have django-extensions installed and in entered into the INSTALLED_APPS settings file.
-    
-        INSTALLED_APPS = [
-            "nascar.apps.NascarConfig",
-            "django.contrib.admin",
-            "django.contrib.auth",
-            "django.contrib.contenttypes",
-            "django.contrib.sessions",
-            "django.contrib.messages",
-            "django.contrib.staticfiles",
-            "django_extensions",
-        ]
+	Reads drivers.csv file and imports races into the races table.
+	If there are duplicates, it will ignore duplicates
+	must have django-extensions installed and in entered into the INSTALLED_APPS settings file.
+	
+		INSTALLED_APPS = [
+			"nascar.apps.NascarConfig",
+			"django.contrib.admin",
+			"django.contrib.auth",
+			"django.contrib.contenttypes",
+			"django.contrib.sessions",
+			"django.contrib.messages",
+			"django.contrib.staticfiles",
+			"django_extensions",
+		]
 
-    to run:
-        python manage.py runscript load_races_from_csv
+	to run:
+		python manage.py runscript load_races_from_csv
 """
 
 import csv
@@ -43,11 +43,30 @@ logging.basicConfig(
 )
 
 
+def get_track(track_name: str):
+    try:
+        logging.info(f"Finding {track_name}")
+        track = Track.objects.get(name=track_name)  # configuration=data.CONFIGURATION
+        print(f"Found track {track_name} ok!")
+        logging.info(f"Found {track_name} ok!")
+        return track
+    except Track.DoesNotExist as e:
+        print(f"Creating Track {track_name}")
+        try:
+            track = Track()
+            track.name = track_name
+            track.save()
+            return track
+        except Track.DoesNotExist as e:
+            logging.info(f"Create {track.name} failed, exiting at get_track()!")
+            exit(-1)
+
+
 def run():
     user = User.objects.get(pk=1)
     # find all the csv files and get the race header information for the track and date
     for race in file_path.glob("*.csv"):
-        # logging.info(f"race={race}")
+        logging.info(f"race={race}")
         with open(race) as f:
             reader = csv.reader(f, delimiter="\t")
             RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
@@ -55,32 +74,20 @@ def run():
                 data = RaceInfo(*row)
                 # logging.info(f"{data}")
                 # for row in reader:
-                # logging.info(f"data.DATE={data.RACE_DATE}")
+                logging.info(f"data.DATE={data.RACE_DATE}")
+                track = get_track(data.TRACK)
                 try:
-                    if data.CONFIGURATION == "Road course":
-                        logging.info(
-                            f"fetching data.TRACK={data.TRACK} data.configuration={data.CONFIGURATION}"
-                        )
-                        track = Track.objects.get(
-                            name=data.TRACK, configuration=data.CONFIGURATION
-                        )
-                    else:
-                        logging.info(
-                            f"fetching data.TRACK={data.TRACK} data.configuration={data.CONFIGURATION}"
-                        )
-                        track = Track.objects.get(name=data.TRACK)
-                    # logging.info(
-                    #     f"\ntrack={track}\nrace_date={data.RACE_DATE}\ntrack.id={track.id}"
-                    # )
                     race = Race.objects.get(race_date=data.RACE_DATE, track=track)
-                    logging.info(f"\nSkipping - race={data}")
+                    print(f"Found race {track} {race} ok!")
+                    break
                 except Race.DoesNotExist as e:
-                    logging.info(f"\nInserting - {data}")
-                    race = Race()
-                    race.user = user
-                    race.track = Track.objects.get(name=data.TRACK)
-                    # logging.info(f"{data.RACE_DATE}")
-                    race.race_date = data.RACE_DATE
-                    race.save()
-                    # logging.info(f"{race}")
-                break  # Just read the header
+                    print(f"Race: {e} race_date='{data.RACE_DATE}'")
+                    exit(-1)
+                    # logging.info(f"\nSkipping - race={data}")
+                logging.info(f"\nInserting - {data}")
+                race = Race()
+                race.user = user
+                # logging.info(f"{data.RACE_DATE}")
+                race.race_date = data.RACE_DATE
+                race.save()
+                # logging.info(f"{race}")

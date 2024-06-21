@@ -1,0 +1,39 @@
+TRACK	RACE_DATE	CONFIGURATION
+New Hampshire Motor Speedway	2023-07-17	Road course
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Martin Truex Jr.	19	Toyota	301	2	0	40	0	0
+2	Joey Logano	22	Ford	301	4	0	35	0	0
+3	Kyle Larson	5	Chevrolet	301	15	0	34	0	0
+4	Kevin Harvick	4	Ford	301	13	0	33	0	0
+5	Brad Keselowski	6	Ford	301	9	0	32	0	0
+6	Tyler Reddick	45	Toyota	301	6	0	31	0	0
+7	Denny Hamlin	11	Toyota	301	20	0	30	0	0
+8	Bubba Wallace	23	Toyota	301	8	0	29	0	0
+9	Austin Dillon	3	Chevrolet	301	11	0	28	0	0
+10	Chase Briscoe	14	Ford	301	27	0	27	0	0
+11	Erik Jones	43	Chevrolet	301	30	0	26	0	0
+12	Chase Elliott	9	Chevrolet	301	18	0	25	0	0
+13	Michael McDowell	34	Ford	301	17	0	24	0	0
+14	Alex Bowman	48	Chevrolet	301	25	0	23	0	0
+15	Chris Buescher	17	Ford	301	26	0	22	0	0
+16	Daniel Suarez	99	Chevrolet	301	12	0	21	0	0
+17	Justin Haley	31	Chevrolet	301	19	0	20	0	0
+18	Ricky Stenhouse Jr.	47	Chevrolet	301	16	0	19	0	0
+19	AJ Allmendinger	16	Chevrolet	301	14	0	18	0	0
+20	Harrison Burton	21	Ford	301	28	0	17	0	0
+21	Todd Gilliland	38	Ford	301	23	0	16	0	0
+22	Ryan Blaney	12	Ford	301	5	0	15	0	0
+23	Ross Chastain	1	Chevrolet	301	31	0	14	0	0
+24	William Byron	24	Chevrolet	301	7	0	13	0	0
+25	Austin Cindric	2	Ford	301	22	0	12	0	0
+26	Ty Dillon	77	Chevrolet	301	35	0	11	0	0
+27	Ty Gibbs	54	Toyota	301	36	0	10	0	0
+28	Ryan Preece	41	Ford	300	21	0	9	0	0
+29	Christopher Bell	20	Toyota	299	1	0	8	0	0
+30	Ryan Newman	15	Ford	299	33	0	7	0	0
+31	B.J. McLeod	78	Chevrolet	295	32	0	6	0	0
+32	Noah Gragson	42	Chevrolet	268	29	0	5	0	0
+33	Corey LaJoie	7	Chevrolet	176	24	0	4	0	0
+34	Aric Almirola	10	Ford	168	3	0	3	0	0
+35	Cole Custer	51	Ford	130	34	0	0	0	0
+36	Kyle Busch	8	Chevrolet	71	10	0	1	0	0
