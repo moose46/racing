@@ -1,0 +1,37 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Tyler Reddick	8	Chevrolet	334	4	0	0	0	0
+2	Joey Logano	22	Ford	334	2	0	0	0	0
+3	Justin Haley	31	Chevrolet	334	31	0	0	0	0
+4	Ryan Blaney	12	Ford	334	14	0	0	0	0
+5	Chase Briscoe	14	Ford	334	30	0	0	0	0
+6	Erik Jones	43	Chevrolet	334	27	0	0	0	0
+7	William Byron	24	Chevrolet	334	3	0	0	0	0
+8	Brad Keselowski	6	Ford	334	1	0	0	0	0
+9	Kyle Larson	5	Chevrolet	334	9	0	0	0	0
+10	Denny Hamlin	11	Toyota	334	8	0	0	0	0
+11	Michael McDowell	34	Ford	334	5	0	0	0	0
+12	Daniel Suarez	99	Chevrolet	334	10	0	0	0	0
+13	Ross Chastain	1	Chevrolet	334	12	0	0	0	0
+14	Corey LaJoie	7	Chevrolet	334	29	0	0	0	0
+15	Austin Cindric	2	Ford	334	11	0	0	0	0
+16	Ty Dillon	42	Chevrolet	334	32	0	0	0	0
+17	Austin Dillon	3	Chevrolet	334	7	0	0	0	0
+18	Harrison Burton	21	Ford	334	20	0	0	0	0
+19	Kevin Harvick	4	Ford	334	23	0	0	0	0
+20	Ty Gibbs	23	Toyota	334	16	0	0	0	0
+21	Noah Gragson	16	Chevrolet	334	26	0	0	0	0
+22	Landon Cassill	77	Chevrolet	334	35	0	0	0	0
+23	Garrett Smithley	15	Ford	334	33	0	0	0	0
+24	Aric Almirola	10	Ford	334	25	0	0	0	0
+25	Bubba Wallace	45	Toyota	334	19	0	0	0	0
+26	B.J. McLeod	78	Ford	334	34	0	0	0	0
+27	Ricky Stenhouse Jr.	47	Chevrolet	334	21	0	0	0	0
+28	Todd Gilliland	38	Ford	334	28	0	0	0	0
+29	Alex Bowman	48	Chevrolet	334	17	0	0	0	0
+30	Chris Buescher	17	Ford	334	13	0	0	0	0
+31	Martin Truex Jr.	19	Toyota	334	15	0	0	0	0
+32	Chase Elliott	9	Chevrolet	334	6	0	0	0	0
+33	Cody Ware	51	Ford	334	36	0	0	0	0
+34	Christopher Bell	20	Toyota	334	22	0	0	0	0
+35	Cole Custer	41	Ford	334	24	0	0	0	0
+36	Kyle Busch	18	Toyota	334	18	0	0	0	0

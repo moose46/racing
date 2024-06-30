@@ -1,0 +1,25 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Ryan Blaney	12	Ford	140	2	84	0	0	0
+2	Denny Hamlin	11	Toyota	140	16	0	0	0	0
+3	Austin Cindric	2	Ford	140	12	7	0	0	0
+4	Joey Logano	22	Ford	140	9	0	0	0	0
+5	Daniel Suarez	99	Chevrolet	140	23	0	0	0	0
+6	Alex Bowman	48	Chevrolet	140	20	0	0	0	0
+7	AJ Allmendinger	16	Chevrolet	140	10	0	0	0	0
+8	Chris Buescher	17	Ford	140	22	0	0	0	0
+9	Brad Keselowski	6	Ford	140	18	0	0	0	0
+10	Christopher Bell	20	Toyota	140	14	0	0	0	0
+11	William Byron	24	Chevrolet	140	3	2	0	0	0
+12	Aric Almirola	10	Ford	140	8	0	0	0	0
+13	Kurt Busch	45	Toyota	140	5	0	0	0	0
+14	Martin Truex Jr.	19	Toyota	140	7	0	0	0	0
+15	Michael McDowell	34	Ford	140	19	0	0	0	0
+16	Bubba Wallace	23	Toyota	140	17	0	0	0	0
+17	Kevin Harvick	4	Ford	140	15	0	0	0	0
+18	Chase Briscoe	14	Ford	140	11	0	0	0	0
+19	Ricky Stenhouse Jr.	47	Chevrolet	139	21	0	0	0	0
+20	Erik Jones	43	Chevrolet	103	24	0	0	0	0
+21	Kyle Busch	18	Toyota	47	1	47	0	0	0
+22	Ross Chastain	1	Chevrolet	47	6	0	0	0	0
+23	Chase Elliott	9	Chevrolet	47	13	0	0	0	0
+24	Kyle Larson	5	Chevrolet	36	4	0	0	0	0

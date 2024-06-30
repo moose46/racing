@@ -1,0 +1,38 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Kevin Harvick	4	Ford	200	16	38	43	3	0
+2	Bubba Wallace	23	Toyota	200	1	22	35	0	0
+3	Denny Hamlin	11	Toyota	200	9	38	53	19	0
+4	Joey Logano	22	Ford	200	4	0	36	3	0
+5	Ryan Blaney	12	Ford	200	24	0	32	0	0
+6	Martin Truex Jr.	19	Toyota	200	7	0	38	7	0
+7	Kyle Larson	5	Chevrolet	200	8	0	38	8	0
+8	Erik Jones	43	Chevrolet	200	10	5	42	13	0
+9	Alex Bowman	48	Chevrolet	200	30	0	31	3	0
+10	Ty Gibbs	45	Toyota	200	11	2	0	0	0
+11	Chase Elliott	9	Chevrolet	200	13	0	26	0	0
+12	William Byron	24	Chevrolet	200	20	0	31	6	0
+13	Austin Dillon	3	Chevrolet	200	26	0	28	4	0
+14	Ty Dillon	42	Chevrolet	200	25	0	23	0	0
+15	Brad Keselowski	6	Ford	200	33	0	28	6	0
+16	Chris Buescher	17	Ford	200	19	1	27	6	0
+17	Justin Haley	31	Chevrolet	200	21	0	20	0	0
+18	Austin Hill	33	Chevrolet	200	31	0	0	0	0
+19	Corey LaJoie	7	Chevrolet	200	32	0	18	0	0
+20	Chase Briscoe	14	Ford	200	23	0	18	1	0
+21	Josh Bilicki	77	Chevrolet	200	35	0	0	0	0
+22	Cody Ware	51	Ford	200	34	0	15	0	0
+23	B.J. McLeod	78	Ford	199	36	1	0	0	0
+24	Ross Chastain	1	Chevrolet	199	22	29	18	5	0
+25	Daniel Suarez	99	Chevrolet	198	15	33	21	9	0
+26	Christopher Bell	20	Toyota	193	2	31	28	17	0
+27	Todd Gilliland	38	Ford	188	37	0	10	0	0
+28	Michael McDowell	34	Ford	187	14	0	9	0	0
+29	Tyler Reddick	8	Chevrolet	110	6	0	8	0	0
+30	Noah Gragson	16	Chevrolet	109	12	0	0	0	0
+31	Cole Custer	41	Ford	94	17	0	6	0	0
+32	Harrison Burton	21	Ford	29	27	0	5	0	0
+33	Ricky Stenhouse Jr.	47	Chevrolet	25	28	0	4	0	0
+34	Aric Almirola	10	Ford	25	18	0	3	0	0
+35	J.J. Yeley	15	Ford	24	29	0	0	0	0
+36	Kyle Busch	18	Toyota	24	3	0	1	0	0
+37	Austin Cindric	2	Ford	24	5	0	1	0	0

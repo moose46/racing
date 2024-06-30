@@ -1,0 +1,38 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	AJ Allmendinger	16	Chevrolet	109	6	0	0	0	0
+2	William Byron	24	Chevrolet	109	14	0	0	0	0
+3	Kyle Busch	8	Chevrolet	109	5	0	0	0	0
+4	Ty Gibbs	54	Toyota	109	10	0	0	0	0
+5	Joey Logano	22	Ford	109	7	0	0	0	0
+6	Tyler Reddick	45	Toyota	109	1	0	0	0	0
+7	Chris Buescher	17	Ford	109	20	0	0	0	0
+8	Alex Bowman	48	Chevrolet	109	16	0	0	0	0
+9	Chase Elliott	9	Chevrolet	109	8	0	0	0	0
+10	Ross Chastain	1	Chevrolet	109	12	0	0	0	0
+11	Ryan Preece	41	Ford	109	18	0	0	0	0
+12	Ryan Blaney	12	Ford	109	17	0	0	0	0
+13	Kyle Larson	5	Chevrolet	109	36	0	0	0	0
+14	Austin Dillon	3	Chevrolet	109	15	0	0	0	0
+15	Christopher Bell	20	Toyota	109	2	0	0	0	0
+16	Bubba Wallace	23	Toyota	109	4	0	0	0	0
+17	Corey LaJoie	7	Chevrolet	109	24	0	0	0	0
+18	Brad Keselowski	6	Ford	109	19	0	0	0	0
+19	Kevin Harvick	4	Ford	109	22	0	0	0	0
+20	Martin Truex Jr.	19	Toyota	109	11	0	0	0	0
+21	Aric Almirola	10	Ford	109	21	0	0	0	0
+22	Justin Haley	31	Chevrolet	109	25	0	0	0	0
+23	Todd Gilliland	51	Ford	109	32	0	0	0	0
+24	Harrison Burton	21	Ford	109	31	0	0	0	0
+25	Austin Cindric	2	Ford	109	29	0	0	0	0
+26	Josh Bilicki	78	Chevrolet	109	28	0	0	0	0
+27	Austin Hill	62	Chevrolet	109	33	0	0	0	0
+28	Chase Briscoe	14	Ford	109	30	0	0	0	0
+29	Mike Rockenfeller	42	Chevrolet	109	26	0	0	0	0
+30	Zane Smith	38	Ford	109	34	0	0	0	0
+31	Ty Dillon	77	Chevrolet	109	37	0	0	0	0
+32	Michael McDowell	34	Ford	109	13	0	0	0	0
+33	Daniel Suarez	99	Chevrolet	109	3	0	0	0	0
+34	Ricky Stenhouse Jr.	47	Chevrolet	109	27	0	0	0	0
+35	Andy Lally	15	Ford	109	35	0	0	0	0
+36	Erik Jones	43	Chevrolet	109	23	0	0	0	0
+37	Denny Hamlin	11	Toyota	109	9	0	0	0	0

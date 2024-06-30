@@ -1,0 +1,38 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Chase Elliott	9	Chevrolet	188	16	0	58	18	0
+2	Ryan Blaney	12	Ford	188	19	0	45	10	0
+3	Michael McDowell	34	Ford	188	29	0	34	0	0
+4	Ross Chastain	1	Chevrolet	188	6	0	38	5	0
+5	Denny Hamlin	11	Toyota	188	3	0	41	9	0
+6	Erik Jones	43	Chevrolet	188	12	0	38	7	0
+7	Todd Gilliland	38	Ford	188	34	0	30	0	0
+8	Daniel Suarez	99	Chevrolet	188	14	0	36	7	0
+9	Austin Cindric	2	Ford	188	17	0	35	7	0
+10	Chase Briscoe	14	Ford	188	5	0	28	1	0
+11	Landon Cassill	77	Chevrolet	188	33	0	0	0	0
+12	William Byron	24	Chevrolet	188	9	0	25	0	0
+13	Austin Dillon	3	Chevrolet	188	20	0	24	0	0
+14	Aric Almirola	10	Ford	188	4	0	23	0	0
+15	Justin Haley	31	Chevrolet	188	21	0	31	9	0
+16	Bubba Wallace	45	Toyota	188	27	0	21	0	0
+17	Christopher Bell	20	Toyota	188	1	0	20	0	0
+18	Kyle Larson	5	Chevrolet	188	2	0	30	11	0
+19	Noah Gragson	48	Chevrolet	188	7	0	0	0	0
+20	Kyle Busch	18	Toyota	188	26	0	21	4	0
+21	Cole Custer	41	Ford	188	28	0	16	0	0
+22	Ricky Stenhouse Jr.	47	Chevrolet	188	25	0	20	5	0
+23	Ty Dillon	42	Chevrolet	188	30	0	14	0	0
+24	Brad Keselowski	6	Ford	188	18	0	13	0	0
+25	Chris Buescher	17	Ford	188	23	0	15	3	0
+26	Martin Truex Jr.	19	Toyota	188	22	0	11	0	0
+27	Joey Logano	22	Ford	188	11	0	16	6	0
+28	Tyler Reddick	8	Chevrolet	188	8	0	9	0	0
+29	Kevin Harvick	4	Ford	188	24	0	8	0	0
+30	Justin Allgaier	62	Chevrolet	188	31	0	0	0	0
+31	J.J. Yeley	15	Ford	188	36	0	0	0	0
+32	Cody Ware	51	Ford	188	37	0	5	0	0
+33	B.J. McLeod	78	Ford	188	35	0	0	0	0
+34	Daniel Hemric	16	Chevrolet	188	13	0	0	0	0
+35	Corey LaJoie	7	Chevrolet	188	32	0	2	0	0
+36	Harrison Burton	21	Ford	188	15	0	1	0	0
+37	Ty Gibbs	23	Toyota	188	10	0	0	0	0

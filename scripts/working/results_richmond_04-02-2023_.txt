@@ -1,0 +1,38 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Kyle Larson	5	Chevrolet	400	9	93	52	12	0
+2	Josh Berry	9	Chevrolet	400	30	10	0	0	0
+3	Ross Chastain	1	Chevrolet	400	4	16	48	14	0
+4	Christopher Bell	20	Toyota	400	21	26	45	12	0
+5	Kevin Harvick	4	Ford	400	10	0	41	9	0
+6	Michael McDowell	34	Ford	400	15	0	31	0	0
+7	Joey Logano	22	Ford	400	18	0	36	6	0
+8	Alex Bowman	48	Chevrolet	400	1	8	37	8	0
+9	Ty Gibbs	54	Toyota	400	14	0	29	1	0
+10	Brad Keselowski	6	Ford	400	24	1	34	7	0
+11	Martin Truex Jr.	19	Toyota	400	12	56	33	7	0
+12	Chase Briscoe	14	Ford	400	19	0	26	1	0
+13	Aric Almirola	10	Ford	400	32	0	24	0	0
+14	Kyle Busch	8	Chevrolet	400	2	1	23	0	0
+15	Todd Gilliland	38	Ford	400	13	0	22	0	0
+16	Tyler Reddick	45	Toyota	400	5	0	26	5	0
+17	Chandler Smith	13	Chevrolet	400	37	0	0	0	0
+18	Ryan Preece	41	Ford	400	33	0	19	0	0
+19	Harrison Burton	21	Ford	400	26	0	18	0	0
+20	Denny Hamlin	11	Toyota	400	11	71	27	10	0
+21	Corey LaJoie	7	Chevrolet	400	16	0	16	0	0
+22	Bubba Wallace	23	Toyota	400	28	1	15	0	0
+23	Daniel Suarez	99	Chevrolet	400	20	0	14	0	0
+24	William Byron	24	Chevrolet	400	3	117	31	18	0
+25	Austin Dillon	3	Chevrolet	399	27	0	12	0	0
+26	Ryan Blaney	12	Ford	399	17	0	11	0	0
+27	AJ Allmendinger	16	Chevrolet	399	25	0	10	0	0
+28	Austin Cindric	2	Ford	399	6	0	9	0	0
+29	Justin Haley	31	Chevrolet	399	29	0	8	0	0
+30	Chris Buescher	17	Ford	398	7	0	7	0	0
+31	Erik Jones	43	Chevrolet	398	22	0	6	0	0
+32	Ty Dillon	77	Chevrolet	398	36	0	5	0	0
+33	Anthony Alfredo	78	Chevrolet	396	35	0	0	0	0
+34	Cody Ware	51	Ford	395	31	0	3	0	0
+35	Ricky Stenhouse Jr.	47	Chevrolet	384	8	0	2	0	0
+36	J.J. Yeley	15	Ford	383	34	0	1	0	0
+37	Noah Gragson	42	Chevrolet	303	23	0	1	0	0

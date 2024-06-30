@@ -1,0 +1,37 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Denny Hamlin	11	Toyota	160	8	9	55	15	0
+2	Tyler Reddick	45	Toyota	160	7	15	47	12	0
+3	Martin Truex Jr.	19	Toyota	160	2	20	44	10	0
+4	Kevin Harvick	4	Ford	160	4	0	33	0	0
+5	Ty Gibbs	54	Toyota	160	11	4	36	4	0
+6	Christopher Bell	20	Toyota	160	5	0	31	0	0
+7	Ricky Stenhouse Jr.	47	Chevrolet	160	22	0	30	0	0
+8	Harrison Burton	21	Ford	160	26	0	29	0	0
+9	Erik Jones	43	Chevrolet	160	24	0	29	1	0
+10	Chase Elliott	9	Chevrolet	160	35	0	27	0	0
+11	Bubba Wallace	23	Toyota	160	10	0	32	6	0
+12	Aric Almirola	10	Ford	160	27	0	25	0	0
+13	Ross Chastain	1	Chevrolet	160	21	0	24	0	0
+14	William Byron	24	Chevrolet	160	1	60	31	8	0
+15	Todd Gilliland	38	Ford	160	36	0	22	0	0
+16	Brad Keselowski	6	Ford	160	13	0	21	0	0
+17	AJ Allmendinger	16	Chevrolet	160	16	0	26	6	0
+18	Chris Buescher	17	Ford	160	18	0	21	2	0
+19	Michael McDowell	34	Ford	160	15	0	23	5	0
+20	Kyle Larson	5	Chevrolet	160	3	24	27	10	0
+21	Kyle Busch	8	Chevrolet	160	25	0	16	0	0
+22	Noah Gragson	42	Chevrolet	160	32	0	15	0	0
+23	Austin Cindric	2	Ford	160	9	0	14	0	0
+24	Alex Bowman	48	Chevrolet	160	20	0	19	6	0
+25	Cole Custer	51	Ford	160	31	0	0	0	0
+26	J.J. Yeley	15	Ford	160	28	0	0	0	0
+27	Corey LaJoie	7	Chevrolet	160	12	5	10	0	0
+28	Ty Dillon	77	Chevrolet	160	33	0	18	9	0
+29	Chase Briscoe	14	Ford	160	29	0	8	0	0
+30	Ryan Blaney	12	Ford	160	14	2	10	3	0
+31	Ryan Preece	41	Ford	159	34	0	6	0	0
+32	B.J. McLeod	78	Chevrolet	159	30	0	5	0	0
+33	Justin Haley	31	Chevrolet	153	19	0	7	3	0
+34	Austin Dillon	3	Chevrolet	105	23	0	3	0	0
+35	Joey Logano	22	Ford	48	6	21	12	10	0
+36	Daniel Suarez	99	Chevrolet	37	17	0	1	0	0

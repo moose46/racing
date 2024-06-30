@@ -1,0 +1,38 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Christopher Bell	20	Toyota	250	4	100	52	12	0
+2	Tyler Reddick	45	Toyota	250	6	69	48	13	0
+3	Austin Dillon	3	Chevrolet	250	2	0	52	18	0
+4	Ricky Stenhouse Jr.	47	Chevrolet	250	22	0	33	0	0
+5	Chase Briscoe	14	Ford	250	14	0	41	9	0
+6	Justin Haley	31	Chevrolet	250	25	0	35	4	0
+7	Martin Truex Jr.	19	Toyota	250	27	0	34	4	0
+8	Todd Gilliland	38	Ford	250	15	0	29	0	0
+9	Kevin Harvick	4	Ford	250	26	0	28	0	0
+10	Ty Gibbs	54	Toyota	250	23	0	27	0	0
+11	Michael McDowell	34	Ford	250	13	0	26	0	0
+12	Bubba Wallace	23	Toyota	250	11	0	25	0	0
+13	William Byron	24	Chevrolet	250	10	0	25	1	0
+14	Erik Jones	43	Chevrolet	250	18	0	23	0	0
+15	Harrison Burton	21	Ford	250	20	0	22	0	0
+16	AJ Allmendinger	16	Chevrolet	250	29	0	21	0	0
+17	Brad Keselowski	6	Ford	250	33	0	20	0	0
+18	Chris Buescher	17	Ford	250	28	0	19	0	0
+19	Austin Cindric	2	Ford	250	7	0	18	0	0
+20	J.J. Yeley	15	Ford	250	3	0	0	0	0
+21	Ty Dillon	77	Chevrolet	250	32	0	16	0	0
+22	Denny Hamlin	11	Toyota	250	30	0	15	0	0
+23	Ryan Blaney	12	Ford	250	9	0	23	9	0
+24	Ryan Preece	41	Ford	250	8	0	20	7	0
+25	Daniel Suarez	99	Chevrolet	250	34	0	12	0	0
+26	B.J. McLeod	78	Chevrolet	250	37	0	11	0	0
+27	Josh Berry	9	Chevrolet	250	31	0	0	0	0
+28	Ross Chastain	1	Chevrolet	249	16	0	9	0	0
+29	Alex Bowman	48	Chevrolet	248	17	0	8	0	0
+30	Corey LaJoie	7	Chevrolet	247	35	0	7	0	0
+31	Aric Almirola	10	Ford	240	19	0	7	1	0
+32	Kyle Busch	8	Chevrolet	236	5	6	19	14	0
+33	Noah Gragson	42	Chevrolet	205	36	0	4	0	0
+34	Matt Crafton	51	Ford	185	24	0	0	0	0
+35	Kyle Larson	5	Chevrolet	177	1	75	20	18	0
+36	Jonathan Davenport	13	Chevrolet	176	21	0	1	0	0
+37	Joey Logano	22	Ford	96	12	0	1	0	0

@@ -1,0 +1,40 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Kyle Larson	5	Chevrolet	90	2	5	43	3	0
+2	AJ Allmendinger	16	Chevrolet	90	6	0	0	0	0
+3	Joey Logano	22	Ford	90	20	15	49	15	0
+4	Chase Elliott	9	Chevrolet	90	1	29	40	7	0
+5	Daniel Suarez	99	Chevrolet	90	9	0	40	8	0
+6	Michael McDowell	34	Ford	90	3	14	42	11	0
+7	Tyler Reddick	8	Chevrolet	90	5	2	39	9	0
+8	Christopher Bell	20	Toyota	90	38	0	30	1	0
+9	Chris Buescher	17	Ford	90	7	0	32	4	0
+10	Erik Jones	43	Chevrolet	90	31	0	27	0	0
+11	Cole Custer	41	Ford	90	29	7	28	2	0
+12	Kevin Harvick	4	Ford	90	24	0	25	0	0
+13	Austin Cindric	2	Ford	90	8	0	24	0	0
+14	Alex Bowman	48	Chevrolet	90	11	0	23	0	0
+15	Ricky Stenhouse Jr.	47	Chevrolet	90	21	0	22	0	0
+16	Ty Dillon	42	Chevrolet	90	28	0	31	10	0
+17	Austin Dillon	3	Chevrolet	90	12	6	20	0	0
+18	Justin Haley	31	Chevrolet	90	13	0	19	0	0
+19	Brad Keselowski	6	Ford	90	15	0	18	0	0
+20	Denny Hamlin	11	Toyota	90	22	0	17	0	0
+21	Ross Chastain	1	Chevrolet	90	18	0	22	6	0
+22	William Byron	24	Chevrolet	90	4	0	15	0	0
+23	Martin Truex Jr.	19	Toyota	90	25	0	14	0	0
+24	Ryan Blaney	12	Ford	90	26	0	13	0	0
+25	Chase Briscoe	14	Ford	90	14	7	22	10	0
+26	Ty Gibbs	45	Toyota	90	16	0	0	0	0
+27	Corey LaJoie	7	Chevrolet	90	32	0	10	0	0
+28	Harrison Burton	21	Ford	90	30	0	9	0	0
+29	Aric Almirola	10	Ford	90	35	0	8	0	0
+30	Mike Rockenfeller	77	Chevrolet	90	33	0	7	0	0
+31	Joey Hand	15	Ford	90	17	0	11	5	0
+32	Kyle Busch	18	Toyota	89	10	0	16	11	0
+33	Loris Hezemans	27	Ford	89	34	0	0	0	0
+34	Cody Ware	51	Ford	88	39	0	3	0	0
+35	Bubba Wallace	23	Toyota	83	23	0	2	0	0
+36	Daniil Kvyat	26	Toyota	58	36	0	1	0	0
+37	Kimi Raikkonen	91	Chevrolet	44	27	0	1	0	0
+38	Todd Gilliland	38	Ford	28	19	5	8	7	0
+39	Kyle Tilley	78	Ford	15	37	0	1	0	0

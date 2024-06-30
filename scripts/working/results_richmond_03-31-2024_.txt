@@ -1,0 +1,37 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Denny Hamlin	11	Toyota	407	11	17	46	6	0
+2	Joey Logano	22	Ford	407	10	0	49	14	0
+3	Kyle Larson	5	Chevrolet	407	1	144	51	17	0
+4	Martin Truex Jr.	19	Toyota	407	7	228	50	17	0
+5	Chase Elliott	9	Chevrolet	407	2	5	36	4	0
+6	Christopher Bell	20	Toyota	407	29	9	36	5	0
+7	William Byron	24	Chevrolet	407	13	0	32	2	0
+8	Brad Keselowski	6	Ford	407	23	0	29	0	0
+9	Chris Buescher	17	Ford	407	14	0	32	4	0
+10	Tyler Reddick	45	Toyota	407	19	0	28	1	0
+11	Josh Berry	4	Ford	407	30	2	37	11	0
+12	Noah Gragson	10	Ford	407	17	0	25	0	0
+13	Bubba Wallace	23	Toyota	407	5	2	36	12	0
+14	Erik Jones	43	Toyota	407	27	0	23	0	0
+15	Ross Chastain	1	Chevrolet	407	3	0	25	3	0
+16	Ty Gibbs	54	Toyota	407	8	0	21	0	0
+17	Alex Bowman	48	Chevrolet	407	4	0	28	8	0
+18	Chase Briscoe	14	Ford	407	32	0	19	0	0
+19	Ryan Blaney	12	Ford	407	12	0	18	0	0
+20	Kyle Busch	8	Chevrolet	407	15	0	17	0	0
+21	Todd Gilliland	38	Ford	407	6	0	21	5	0
+22	Daniel Suarez	99	Chevrolet	407	20	0	15	0	0
+23	Austin Cindric	2	Ford	406	9	0	14	0	0
+24	Austin Dillon	3	Chevrolet	406	22	0	13	0	0
+25	John Hunter Nemechek	42	Toyota	406	18	0	12	0	0
+26	Michael McDowell	34	Ford	406	31	0	11	0	0
+27	Carson Hocevar	77	Chevrolet	406	25	0	10	0	0
+28	Ryan Preece	41	Ford	406	16	0	10	1	0
+29	Ty Dillon	16	Chevrolet	406	33	0	0	0	0
+30	Daniel Hemric	31	Chevrolet	405	34	0	7	0	0
+31	Kaz Grala	15	Ford	405	35	0	6	0	0
+32	Justin Haley	51	Ford	405	36	0	5	0	0
+33	Ricky Stenhouse Jr.	47	Chevrolet	405	24	0	4	0	0
+34	Harrison Burton	21	Ford	405	26	0	3	0	0
+35	Zane Smith	71	Chevrolet	404	28	0	2	0	0
+36	Corey LaJoie	7	Chevrolet	404	21	0	1	0	0

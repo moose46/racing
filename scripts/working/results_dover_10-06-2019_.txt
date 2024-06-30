@@ -1,0 +1,39 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Kyle Larson	42	Chevrolet	400	2	154	57	17	0
+2	Martin Truex Jr.	19	Toyota	400	3	15	54	19	0
+3	Alex Bowman	88	Chevrolet	400	12	0	44	10	0
+4	Kevin Harvick	4	Ford	400	4	0	46	13	0
+5	Denny Hamlin	11	Toyota	400	1	218	50	18	0
+6	Kyle Busch	18	Toyota	400	18	0	34	3	0
+7	Matt DiBenedetto	95	Toyota	400	20	0	30	0	0
+8	Jimmie Johnson	48	Chevrolet	400	11	1	39	10	0
+9	Kurt Busch	1	Chevrolet	399	9	3	28	0	0
+10	Clint Bowyer	14	Ford	399	17	0	28	1	0
+11	Brad Keselowski	2	Ford	399	16	0	28	2	0
+12	Paul Menard	21	Ford	398	13	6	25	0	0
+13	William Byron	24	Chevrolet	398	6	1	31	7	0
+14	Daniel Suarez	41	Ford	398	15	1	23	0	0
+15	Erik Jones	20	Toyota	398	8	0	28	6	0
+16	Ricky Stenhouse Jr.	17	Ford	398	19	0	21	0	0
+17	Aric Almirola	10	Ford	398	7	0	20	0	0
+18	Austin Dillon	3	Chevrolet	398	27	0	19	0	0
+19	Ryan Preece	47	Chevrolet	396	32	0	18	0	0
+20	Bubba Wallace	43	Chevrolet	395	26	0	17	0	0
+21	Daniel Hemric	8	Chevrolet	394	31	0	16	0	0
+22	Ryan Newman	6	Ford	393	24	0	15	0	0
+23	Ty Dillon	13	Chevrolet	393	25	1	14	0	0
+24	Michael McDowell	34	Ford	391	28	0	13	0	0
+25	Matt Tifft	36	Ford	390	23	0	12	0	0
+26	Landon Cassill	00	Chevrolet	389	30	0	0	0	0
+27	David Ragan	38	Ford	388	21	0	10	0	0
+28	Corey LaJoie	32	Ford	385	29	0	9	0	0
+29	B.J. McLeod	51	Ford	382	33	0	0	0	0
+30	Joe Nemechek	27	Chevrolet	381	36	0	0	0	0
+31	Ross Chastain	15	Chevrolet	380	34	0	0	0	0
+32	J.J. Yeley	52	Ford	380	35	0	0	0	0
+33	Garrett Smithley	54	Ford	377	37	0	0	0	0
+34	Joey Logano	22	Ford	375	14	0	3	0	0
+35	Ryan Blaney	12	Ford	297	10	0	6	4	0
+36	Chris Buescher	37	Chevrolet	232	22	0	1	0	0
+37	Reed Sorenson	77	Chevrolet	180	38	0	1	0	0
+38	Chase Elliott	9	Chevrolet	8	5	0	1	0	0

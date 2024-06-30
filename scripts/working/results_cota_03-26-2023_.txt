@@ -1,0 +1,40 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Tyler Reddick	45	Toyota	75	2	41	50	10	0
+2	Kyle Busch	8	Chevrolet	75	9	0	39	4	0
+3	Alex Bowman	48	Chevrolet	75	6	0	41	7	0
+4	Ross Chastain	1	Chevrolet	75	12	0	39	6	0
+5	William Byron	24	Chevrolet	75	1	28	42	10	0
+6	Austin Cindric	2	Ford	75	3	2	40	9	0
+7	Ricky Stenhouse Jr.	47	Chevrolet	75	18	0	35	5	0
+8	Chris Buescher	17	Ford	75	32	1	35	6	0
+9	Ty Gibbs	54	Toyota	75	17	0	28	0	0
+10	Todd Gilliland	38	Ford	75	36	0	27	0	0
+11	Corey LaJoie	7	Chevrolet	75	27	0	26	0	0
+12	Michael McDowell	34	Ford	75	20	0	33	8	0
+13	Kevin Harvick	4	Ford	75	29	0	31	7	0
+14	Kyle Larson	5	Chevrolet	75	13	0	27	4	0
+15	Chase Briscoe	14	Ford	75	19	0	24	2	0
+16	Denny Hamlin	11	Toyota	75	21	0	21	0	0
+17	Martin Truex Jr.	19	Toyota	75	25	0	20	0	0
+18	Jenson Button	15	Ford	75	24	0	0	0	0
+19	Justin Haley	31	Chevrolet	75	23	0	18	0	0
+20	Noah Gragson	42	Chevrolet	75	10	0	18	1	0
+21	Ryan Blaney	12	Ford	75	38	0	16	0	0
+22	Harrison Burton	21	Ford	75	16	0	15	0	0
+23	Erik Jones	43	Chevrolet	75	8	0	17	3	0
+24	Jordan Taylor	9	Chevrolet	75	4	0	0	0	0
+25	Cody Ware	51	Ford	75	37	0	12	0	0
+26	Josh Bilicki	78	Chevrolet	75	33	0	0	0	0
+27	Daniel Suarez	99	Chevrolet	75	5	1	15	5	0
+28	Joey Logano	22	Ford	75	15	1	9	0	0
+29	Kimi Raikkonen	91	Chevrolet	75	22	0	0	0	0
+30	Aric Almirola	10	Ford	74	39	0	7	0	0
+31	Christopher Bell	20	Toyota	73	14	1	8	2	0
+32	Ryan Preece	41	Ford	68	26	0	6	1	0
+33	Austin Dillon	3	Chevrolet	62	28	0	13	9	0
+34	AJ Allmendinger	16	Chevrolet	60	7	0	11	8	0
+35	Brad Keselowski	6	Ford	56	30	0	2	0	0
+36	Conor Daly	50	Chevrolet	16	35	0	0	0	0
+37	Bubba Wallace	23	Toyota	10	11	0	1	0	0
+38	Jimmie Johnson	84	Chevrolet	0	31	0	1	0	0
+39	Ty Dillon	77	Chevrolet	0	34	0	1	0	0

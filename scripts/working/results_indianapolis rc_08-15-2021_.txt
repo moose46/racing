@@ -1,0 +1,41 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	AJ Allmendinger	16	Chevrolet	95	8	2	0	0	0
+2	Ryan Blaney	12	Ford	95	16	0	35	0	0
+3	Kyle Larson	5	Chevrolet	95	4	28	36	2	0
+4	Chase Elliott	9	Chevrolet	95	3	14	35	2	0
+5	Matt DiBenedetto	21	Ford	95	15	1	38	6	0
+6	Kurt Busch	1	Chevrolet	95	20	0	31	0	0
+7	Erik Jones	43	Chevrolet	95	28	0	37	7	0
+8	Justin Haley	77	Chevrolet	95	29	0	0	0	0
+9	Austin Cindric	33	Ford	95	13	0	0	0	0
+10	Ryan Newman	6	Ford	95	32	0	27	0	0
+11	Ricky Stenhouse Jr.	47	Chevrolet	95	22	0	37	11	0
+12	Chris Buescher	17	Ford	95	19	0	25	0	0
+13	Bubba Wallace	23	Toyota	95	27	0	24	0	0
+14	Kevin Harvick	4	Ford	95	25	0	23	0	0
+15	Martin Truex Jr.	19	Toyota	95	6	0	22	0	0
+16	Corey LaJoie	7	Chevrolet	95	26	0	25	4	0
+17	Alex Bowman	48	Chevrolet	95	24	0	20	0	0
+18	Josh Bilicki	52	Ford	95	36	0	19	0	0
+19	Aric Almirola	10	Ford	95	18	0	18	0	0
+20	Kyle Busch	18	Toyota	95	21	0	17	0	0
+21	Tyler Reddick	8	Chevrolet	95	11	6	36	20	0
+22	Quin Houff	00	Chevrolet	95	38	0	15	0	0
+23	Denny Hamlin	11	Toyota	95	14	27	14	0	0
+24	Brad Keselowski	2	Ford	95	31	2	18	5	0
+25	Cole Custer	41	Ford	94	10	0	12	0	0
+26	Chase Briscoe	14	Ford	94	2	12	13	2	0
+27	Timmy Hill	66	Toyota	94	40	0	0	0	0
+28	Garrett Smithley	53	Ford	94	39	0	0	0	0
+29	Ross Chastain	42	Chevrolet	93	9	0	8	0	0
+30	Michael McDowell	34	Ford	88	12	1	16	9	0
+31	Austin Dillon	3	Chevrolet	88	23	1	23	17	0
+32	James Davison	15	Chevrolet	80	34	0	5	0	0
+33	William Byron	24	Chevrolet	77	1	1	4	0	0
+34	Joey Logano	22	Ford	77	7	0	3	0	0
+35	Ryan Preece	37	Chevrolet	77	30	0	16	14	0
+36	Christopher Bell	20	Toyota	77	17	0	1	0	0
+37	Daniel Suarez	99	Chevrolet	77	5	0	1	0	0
+38	Anthony Alfredo	38	Ford	68	33	0	1	0	0
+39	Andy Lally	78	Ford	55	35	0	0	0	0
+40	Cody Ware	51	Chevrolet	46	37	0	0	0	0

@@ -1,0 +1,37 @@
+POS	DRIVER	CAR	MANUFACTURER	LAPS	START	LED	PTS	BONUS	PENALTY
+1	Chase Elliott	9	Chevrolet	300	4	42	50	10	0
+2	Kurt Busch	45	Toyota	300	19	3	42	7	0
+3	Ryan Blaney	12	Ford	300	6	1	44	10	0
+4	Kyle Larson	5	Chevrolet	300	3	0	43	10	0
+5	Ross Chastain	1	Chevrolet	300	7	0	36	4	0
+6	Denny Hamlin	11	Toyota	300	1	114	49	18	0
+7	Austin Cindric	2	Ford	300	24	0	30	0	0
+8	Christopher Bell	20	Toyota	300	9	0	36	7	0
+9	Joey Logano	22	Ford	300	2	4	28	0	0
+10	Kevin Harvick	4	Ford	300	8	0	36	9	0
+11	Erik Jones	43	Chevrolet	300	23	0	26	0	0
+12	Bubba Wallace	23	Toyota	300	30	0	29	4	0
+13	Michael McDowell	34	Ford	300	18	0	25	1	0
+14	Austin Dillon	3	Chevrolet	300	20	0	23	0	0
+15	Daniel Suarez	99	Chevrolet	300	5	0	22	0	0
+16	Ricky Stenhouse Jr.	47	Chevrolet	300	25	0	21	0	0
+17	Aric Almirola	10	Ford	300	11	0	20	0	0
+18	Tyler Reddick	8	Chevrolet	300	16	0	19	0	0
+19	AJ Allmendinger	16	Chevrolet	300	14	0	0	0	0
+20	Corey LaJoie	7	Chevrolet	300	22	0	17	0	0
+21	Kyle Busch	18	Toyota	300	36	54	26	10	0
+22	Martin Truex Jr.	19	Toyota	300	10	82	35	20	0
+23	Justin Haley	31	Chevrolet	300	21	0	14	0	0
+24	Todd Gilliland	38	Ford	300	33	0	13	0	0
+25	Harrison Burton	21	Ford	300	26	0	12	0	0
+26	Cole Custer	41	Ford	300	17	0	11	0	0
+27	Cody Ware	51	Ford	298	31	0	10	0	0
+28	J.J. Yeley	15	Ford	298	32	0	0	0	0
+29	Brad Keselowski	6	Ford	298	27	0	8	0	0
+30	Chris Buescher	17	Ford	297	15	0	7	0	0
+31	Ty Dillon	42	Chevrolet	297	29	0	6	0	0
+32	B.J. McLeod	78	Ford	295	35	0	0	0	0
+33	Josh Bilicki	77	Chevrolet	285	34	0	0	0	0
+34	Chase Briscoe	14	Ford	269	28	0	3	0	0
+35	William Byron	24	Chevrolet	262	13	0	2	0	0
+36	Alex Bowman	48	Chevrolet	49	12	0	1	0	0
