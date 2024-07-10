@@ -10,6 +10,8 @@ from datetime import datetime
 from pathlib import Path
 from shutil import copyfile
 
+from genericpath import isfile
+
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
     Path.home() / "Documents" / "VisualCodeSource" / "beerme2" / "data"
@@ -51,10 +53,21 @@ def run():
     dirs = check_env()
     race_date = get_race_date()
     print(source_txt_race_file)
+    # clean directory first
+    for file_name in os.listdir(target_txt_race_file):
+        file = target_txt_race_file / file_name
+        if os.path.isfile(file):
+            os.remove(file)
+    for file_name in os.listdir(target_csv_race_file):
+        file = target_csv_race_file / file_name
+        if os.path.isfile(file):
+            os.remove(file)
+
     # copy race results files, from source directory to the target
     for f in dirs:
         if f.endswith(".txt") and f.__contains__("results_"):
             # print(f)
+
             copyfile(source_txt_race_file / f, target_txt_race_file / f)
 
     for f in target_txt_race_file.glob("results*_.txt"):

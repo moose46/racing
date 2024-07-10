@@ -62,6 +62,7 @@ class PersonAdmin(admin.ModelAdmin):
 @admin.register(Track)
 class TrackAdmin(admin.ModelAdmin):
     list_display = ["track_name", "state", "show_website"]
+    ordering = ["name"]
 
     def show_website(self, instance):
         return format_html("<a href='{url}'>{url}</a>", url=instance.website)
