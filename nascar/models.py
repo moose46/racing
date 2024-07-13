@@ -148,6 +148,8 @@ class Race(Base):
 
     def __str__(self) -> str:
         return self.name
+    class META:
+        unique_together = ('track','race_date')
 
 
 # class Role(Base):
