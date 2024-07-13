@@ -24,6 +24,7 @@ import logging
 import os
 import sys
 from collections import namedtuple
+from lib2to3.pgen2.driver import Driver
 from pathlib import Path
 from pickle import TRUE
 
@@ -31,12 +32,16 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
-from nascar.models import AutoManufacturer, Person, Race, RaceResult, Role, Track
+from nascar.models import (AutoManufacturer, Person, Race, RaceResult, Role,
+                           Track)
 
 # https://k0nze.dev/posts/python-relative-imports-vscode/
-file_path = Path.cwd() / "scripts" / "csv"
+file_path = Path(__file__).resolve().parent.parent / "scripts" / "csv"
 logging.basicConfig(
-    filename=Path.cwd() / "scripts" / "logs" / "log_results_races.txt",
+    filename=Path(__file__).resolve().parent.parent
+    / "scripts"
+    / "logs"
+    / "log_results_races.txt",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     filemode="w",
@@ -89,6 +94,19 @@ def check_auto_manufacturer_exists(auto_manufacturer):
     return manufacturer
 
 
+def check_driver_exists(name):
+    try:
+        the_driver = Person.objects.get(name=name)
+        logging.debug(f"{the_driver}")
+    except Person.DoesNotExist as e:
+        the_driver = Person()
+        the_role = Role.objects.get(name="Driver")
+        logging.warning(f"{type(Role.objects.get(name="Driver"))}")
+        the_driver.name = name
+        # the_driver.save()
+        return the_driver
+
+
 def check_track_exists(name):
     try:
         track = Track.objects.get(name=name)
@@ -113,6 +131,7 @@ def run():
         # TRACK,RACE_DATE
         # Mid Ohio, 07/10/1946
         # logging.critical(f"{race_results}")
+        the_race = Race()
         with open(race_results) as f:
             reader = csv.reader(f, delimiter="\t")
             RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
@@ -125,10 +144,10 @@ def run():
                 ).strftime("%Y-%m-%d")
                 # race = Race.objects.get(race_date=race_date_converted)
                 if check_if_race_is_already_loaded(race_date=race_date_converted):
-                    logging.info(f"Exists={race_date_converted}")
+                    # logging.info(f"Exists={race_date_converted}")
                     races_skipped += 1
+                    the_race = Race.objects.get(race_date=race_date_converted)
                 else:
-                    the_race = Race()
                     the_race.track = the_track
                     the_race.race_date = datetime.datetime.strptime(
                         race_date_converted, "%Y-%m-%d"
@@ -138,14 +157,18 @@ def run():
                     races_loaded += 1
                     logging.info(f"Added {races_loaded} {the_race}")
                 logging.info(f"Reading nametuple RaceResults={data}")
-                try:
-                    ResultsInfo = namedtuple("ResultsInfo", next(reader), rename=True)
-                    for row in reader:
-                        results_data = ResultsInfo(*row)
-                        logging.warning(f"{results_data}")
-                except Exception as e:
-                    print(f"{e}")
-                    exit()
+                # try:
+                #     ResultsInfo = namedtuple("ResultsInfo", next(reader), rename=True)
+                #     for row in reader:
+                #         race_results = RaceResult()
+                #         race_results.race = the_race
+
+                #         results_data = ResultsInfo(*row)
+                #         # check_driver_exists(results_data.DRIVER)
+                #         logging.warning(f"{row}")
+                # except Exception as e:
+                #     print(f"Exception {e}")
+                #     exit()
             # next(reader)
             # break
         # break

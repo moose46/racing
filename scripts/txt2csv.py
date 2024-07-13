@@ -16,11 +16,10 @@ from racing.settings import BASE_DIR
 
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
-    # Path.home() / "Documents" / "VisualCodeSource" / "beerme2" / "data"
     Path(__file__).resolve().parent.parent.parent / "beerme2" / "data"
 )
-target_txt_race_file = Path.cwd() / "scripts" / "txt"
-target_csv_race_file = Path.cwd() / "scripts" / "csv"
+target_txt_race_file = Path(__file__).resolve().parent.parent / "scripts" / "txt"
+target_csv_race_file = Path(__file__).resolve().parent.parent / "scripts" / "csv"
 
 
 def get_race_date():
@@ -53,6 +52,7 @@ def add_headers(results_file_name):
 
 def run():
     print(f"{source_txt_race_file}")
+    print(f"{target_csv_race_file}")
     dirs = []
     dirs = check_env()
     race_date = get_race_date()
@@ -83,7 +83,7 @@ def run():
 
         csv_filename = os.path.splitext(os.path.basename(f))[0]
         csv_filename = f"{csv_filename}.csv"
-        print(f"{target_csv_race_file / csv_filename}.csv")
+        print(f"{target_csv_race_file / csv_filename}")
         with open(target_csv_race_file / csv_filename, "wt") as fo:
             fo.write("TRACK	RACE_DATE	CONFIGURATION\n")
             fo.writelines(f"{race_track.title()}	{race_date}	N/A\n")

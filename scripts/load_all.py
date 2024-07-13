@@ -1,11 +1,12 @@
-from datetime import datetime
 import os
-from pathlib import Path
 import re
+from datetime import datetime
+from pathlib import Path
+from venv import logger
 
-from nascar.models import Race, Track
 from django.contrib.auth.models import User
 
+from nascar.models import Race, Role, Track
 
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
@@ -76,11 +77,20 @@ def load_races(race_list):
             the_race.save()
 
 
+def load_roles():
+    roles = ["Driver", "Owner", "Crew Chief"]
+    for role in roles:
+        if not Role.objects.filter(name=role).exists():
+            new_role = Role()
+            new_role.name = role
+            new_role.save()
+            logger.info(f"Added New Role {role}")
+            print(f"Added New Role {role}")
+
+
 def run():
     print(f"Hello World!")
     race_list = check_env(source_txt_race_file)
+    load_roles()
     load_tracks(race_list)
     load_races(race_list)
-    for x in race_list:
-        print(f"{x}")
-    check_env(target_csv_race_file)

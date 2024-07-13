@@ -35,9 +35,12 @@ from nascar.models import Race, Track
 # https://k0nze.dev/posts/python-relative-imports-vscode/
 
 # https://k0nze.dev/posts/python-relative-imports-vscode/
-file_path = Path.cwd() / "scripts" / "csv"
+file_path = Path(__file__).resolve().parent.parent / "scripts" / "csv"
 logging.basicConfig(
-    filename=Path.cwd() / "scripts" / "logs" / "log_load_races.txt",
+    filename=Path(__file__).resolve().parent.parent
+    / "scripts"
+    / "logs"
+    / "log_load_races.txt",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     filemode="w",
