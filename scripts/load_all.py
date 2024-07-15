@@ -1,3 +1,5 @@
+from collections import namedtuple
+import csv
 import os
 import re
 from datetime import datetime
@@ -6,7 +8,7 @@ from venv import logger
 
 from django.contrib.auth.models import User
 
-from nascar.models import Race, Role, Track
+from nascar.models import AutoManufacturer, Person, Race, RaceResult, Role, Track
 
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
@@ -20,7 +22,7 @@ class RaceData:
     When passed a file name, parse the track and race date from the file name
     """
 
-    def __init__(self, pfile_name) -> None:
+    def __init__(self, pfile_name, src_path=source_txt_race_file) -> None:
 
         self.file_name = pfile_name
         self._race_track = pfile_name.split("_")[1]
@@ -28,6 +30,11 @@ class RaceData:
         self.race_date = datetime.strptime(self.race_date, "%m-%d-%Y").strftime(
             "%Y-%m-%d"
         )
+        self._src_file_name = src_path / self.file_name
+
+    @property
+    def src_file_name(self):
+        return self._src_file_name
 
     @property
     def race_track(self):
@@ -69,12 +76,12 @@ def load_races(race_list):
         if not Race.objects.filter(race_date=race.race_date).exists():
             the_track = Track.objects.get(name=race.race_track)
             # print(f"{the_track}")
-            the_race = Race()
-            the_race.name = the_track.name
-            the_race.race_date = race.race_date
-            the_race.user = user
-            the_race.track = the_track
-            the_race.save()
+            driver_results = Race()
+            driver_results.name = the_track.name
+            driver_results.race_date = race.race_date
+            driver_results.user = user
+            driver_results.track = the_track
+            driver_results.save()
 
 
 def load_roles():
@@ -88,9 +95,74 @@ def load_roles():
             print(f"Added New Role {role}")
 
 
+def load_results(race_list):
+    """Passed a list of races"""
+    user = User.objects.get(pk=1)
+    for race in race_list:
+        # print(f"{race.file_name}")
+        if Race.objects.filter(race_date=race.race_date).exists():
+            load_results_file(race)
+
+    pass
+
+
+def look_up_driver(driver_name):
+    try:
+        return Person.objects.get(name=driver_name, role=Role.objects.get(name="Driver"))
+
+    except Person.DoesNotExist as e:
+        driver = Person()
+        # TODO: many to many insert
+        role = Role.objects.get(name="Driver")
+        driver.name = driver_name
+        driver.save()
+        driver.role.add(role)
+        driver.save()
+        return driver
+
+def look_up_manufacturer(manufacturer_name):
+    try:
+        return AutoManufacturer.objects.get(name=manufacturer_name)
+    except AutoManufacturer.DoesNotExist as e:
+        auto_manufacturer = AutoManufacturer()
+        auto_manufacturer.name = manufacturer_name
+        auto_manufacturer.save()
+        return auto_manufacturer
+    
+def load_results_file(race):
+    print(f"loading... {race}")
+    with open(race.src_file_name) as f:
+        reader = csv.reader(f, delimiter="\t")
+        RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
+        the_race = Race.objects.get(race_date = race.race_date)
+        if RaceResult.objects.filter(race = the_race).exists():
+            return
+        for header in reader:
+            driver_results = RaceResult()
+            data = RaceInfo(*header)
+            try:
+                driver_results.race = the_race
+                driver_results.start_pos = data.POS
+                # check to make sure the driver is in the database
+                driver_results.driver = look_up_driver(data.DRIVER)
+                driver_results.car_no = data.CAR
+                driver_results.manufacturer = look_up_manufacturer(data.MANUFACTURER)
+                driver_results.laps = data.LAPS
+                driver_results.start = data.START
+                driver_results.led = data.LED
+                driver_results.points = data.PTS
+                driver_results.bonus = data.BONUS
+                driver_results.penality = data.PENALTY
+                driver_results.save()
+            except Exception as e:
+                print(f"Exiting {race} {e} {driver_results.driver}")
+                exit()
+
+
 def run():
     print(f"Hello World!")
     race_list = check_env(source_txt_race_file)
     load_roles()
     load_tracks(race_list)
     load_races(race_list)
+    load_results(race_list)

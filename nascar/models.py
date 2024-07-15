@@ -52,7 +52,7 @@ class Team(Base):
     owner = models.CharField(max_length=32, null=True, blank=True)
     website = models.URLField(null=True, blank=True)
     series = models.ForeignKey(RacingSeries, on_delete=models.CASCADE, blank=True)
-
+    # team_owner = models.ForeignKey(Person, on_delete=models.CASCADE, blank=True)
     # def validate_unique(self, *args, **kwargs):
     #     super().validate_unique(*args, **kwargs)
     #     if self.__class__.objects.filter(series=self.series, name=self.name).exists():
@@ -95,10 +95,10 @@ class Person(Base):
     def __str__(self) -> str:
         return self.name
 
-    class Meta:
-        # unique_together = ["name", "team"]
+    class META:
+        unique_together = ["name", "role.name"]
         ordering = ["name"]
-
+        unique = ["name"]
 
 class State(Base):
     name = models.CharField(max_length=32)
@@ -137,7 +137,8 @@ class Track(Base):
     @property
     def track_name(self):
         return string.capwords(self.name)
-
+    class META:
+        unique = "name"
 
 class Race(Base):
     name = models.CharField(max_length=64)
@@ -162,6 +163,8 @@ class AutoManufacturer(Base):
     def __str__(self) -> str:
         return self.name
 
+    class META:
+        unique = "name"
 
 class RaceResult(Base):
     """One Race One Driver"""
@@ -200,3 +203,4 @@ class RaceResult(Base):
         verbose_name_plural = "Race Results"
         verbose_name = "Race Results"
         ordering = ["driver__name"]
+        unique_together = ["race","driver"]

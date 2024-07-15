@@ -78,17 +78,19 @@ WSGI_APPLICATION = "racing.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
     # "default": {
-    #     "ENGINE": "sqlserver_ado",
-    #     "HOST": "127.0.0.1",
-    #     "PORT": "",
-    #     "NAME": "ProductComp",
-    #     "PASSWORD": "",
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
     # }
+    "default": {
+        "ENGINE": "mssql",
+        "HOST": "localhost",
+        # "PORT": "1433",
+        "NAME": "Racing",
+        "USER": "",
+        "PASSWORD": "",
+        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server",},
+    }
 }
 
 

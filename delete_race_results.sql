@@ -1,0 +1,1 @@
+delete from nascar_raceresult

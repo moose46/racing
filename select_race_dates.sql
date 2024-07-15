@@ -1,0 +1,1 @@
+select distinct race_date from nascar_race order by 1
