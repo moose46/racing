@@ -1,0 +1,1 @@
+select a.name, b.finish_pos, b.car_no from nascar_person a, nascar_raceresult b where a.name = 'Ryan Blaney' and a.id = b.driver_id

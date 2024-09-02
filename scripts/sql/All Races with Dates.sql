@@ -1,0 +1,1 @@
+select distinct name, race_date  from nascar_race
