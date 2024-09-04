@@ -1,0 +1,7 @@
+# *.sql linguist-detectable=true
+# *.sql linguist-language=sql
+# *.sql text
+# .gitattributes
+# NOTE: `binary` is a shortcut for `-diff -merge -text`
+# I don't think the linguist-language is necessary, but there's no harm in adding it if you're already setting attributes for SQL files.
+*.sql diff merge text linguist-language=SQL
