@@ -1,3 +1,8 @@
+
+"""
+python manage.py runscript load_all
+
+"""
 from collections import namedtuple
 import csv
 import os
@@ -136,6 +141,7 @@ def load_results_file(race):
         RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
         the_race = Race.objects.get(race_date = race.race_date)
         if RaceResult.objects.filter(race = the_race).exists():
+            print(f"{the_race} is already loaded!")
             return
         for header in reader:
             driver_results = RaceResult()
@@ -153,6 +159,7 @@ def load_results_file(race):
                 driver_results.points = data.PTS
                 driver_results.bonus = data.BONUS
                 driver_results.penality = data.PENALTY
+                driver_results.finish_pos = data.POS
                 driver_results.save()
             except Exception as e:
                 print(f"Exiting {race} {e} {driver_results.driver}")

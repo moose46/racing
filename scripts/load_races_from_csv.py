@@ -16,6 +16,8 @@
 
     to run:
         python manage.py runscript load_results_from_csv
+
+        python manage.py shell < scripts/{$filename$}
 """
 
 import csv
@@ -24,7 +26,8 @@ import logging
 import os
 import sys
 from collections import namedtuple
-from lib2to3.pgen2.driver import Driver
+# from lib2to3.pgen2.driver import Driver
+from racing import Driver
 from pathlib import Path
 from pickle import TRUE
 
@@ -122,6 +125,7 @@ def run():
     # print(f"{file_path}")
     races_loaded = 0
     races_skipped = 0
+    print("Loading Races Started ...")
     user = User.objects.get(pk=1)
     # logging.info(f"user={user}")
     for race_results in file_path.glob("*.csv"):
