@@ -83,13 +83,15 @@ DATABASES = {
     #     "NAME": BASE_DIR / "db.sqlite3",
     # }
     "default": {
-        "ENGINE": "mssql",
+        "ENGINE": "sqlserver_ado",
         "HOST": "localhost",
         # "PORT": "1433",
         "NAME": "Racing",
         "USER": "",
         "PASSWORD": "",
-        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server",},
+        # "OPTIONS": {
+        #     "driver": "ODBC Driver 17 for SQL Server",
+        # },
     }
 }
 
