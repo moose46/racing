@@ -83,15 +83,17 @@ DATABASES = {
     #     "NAME": BASE_DIR / "db.sqlite3",
     # }
     "default": {
-        "ENGINE": "sqlserver_ado",
+        # "ENGINE": "sqlserver_ado", # laptop only
+        # https://stackoverflow.com/questions/43430091/connecting-django-with-mssql-server
+        "ENGINE": "mssql",  # red-barn only pip install mssql-django
         "HOST": "localhost",
         # "PORT": "1433",
         "NAME": "Racing",
         "USER": "",
         "PASSWORD": "",
-        # "OPTIONS": {
-        #     "driver": "ODBC Driver 17 for SQL Server",
-        # },
+        "OPTIONS": {  # enable for red-barn only
+            "driver": "ODBC Driver 17 for SQL Server",
+        },
     }
 }
 
