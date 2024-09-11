@@ -83,7 +83,7 @@ def load_races(race_list):
     for race in race_list:
         if not Race.objects.filter(race_date=race.race_date).exists():
             the_track = Track.objects.get(name=race.race_track)
-            # print(f"{the_track}")
+            print(f"{the_track}")
             driver_results = Race()
             driver_results.name = the_track.name
             driver_results.race_date = race.race_date

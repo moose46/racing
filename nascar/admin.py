@@ -81,7 +81,8 @@ class StateAdmin(admin.ModelAdmin):
 
 
 @admin.register(RaceResult)
-class RaceResultsAdmin(SortableAdminMixin, admin.ModelAdmin):
+# class RaceResultsAdmin(SortableAdminMixin, admin.ModelAdmin):
+class RaceResultsAdmin(admin.ModelAdmin):
     list_display = [
         "race",
         "driver_name",
