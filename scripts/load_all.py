@@ -54,6 +54,9 @@ class RaceData:
 
 
 def check_env(dir_name):
+    """ when passed a directory name, it
+        returns a list of race results file names
+    """
     if Path.exists(dir_name):
         race_list = []
         for f in os.listdir(dir_name):
@@ -133,7 +136,7 @@ def look_up_manufacturer(manufacturer_name):
         auto_manufacturer.name = manufacturer_name
         auto_manufacturer.save()
         return auto_manufacturer
-    
+
 def load_results_file(race):
     print(f"loading... {race}")
     with open(race.src_file_name) as f:
@@ -148,8 +151,9 @@ def load_results_file(race):
             data = RaceInfo(*header)
             try:
                 driver_results.race = the_race
-                driver_results.start_pos = data.POS
                 # check to make sure the driver is in the database
+                # print(data.START)
+                driver_results.start_pos = data.START
                 driver_results.driver = look_up_driver(data.DRIVER)
                 driver_results.car_no = data.CAR
                 driver_results.manufacturer = look_up_manufacturer(data.MANUFACTURER)
@@ -168,6 +172,7 @@ def load_results_file(race):
 
 def run():
     print(f"Hello World!")
+    # the data files come from beer me
     race_list = check_env(source_txt_race_file)
     load_roles()
     load_tracks(race_list)

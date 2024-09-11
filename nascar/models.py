@@ -71,6 +71,9 @@ class Person(Base):
         "Crew Chief": "CREW_CHIEF",
         "Driver": "DRIVER",
         "Crew Member": "CREW_MEMBER",
+        "Coach": "COACH",
+        "Quarterback": "QUARTERBACK",
+        "Linebacker": "LINEBACKER",
     }
     role = models.ManyToManyField(Role, blank=True)
     name = models.CharField(max_length=32, default="", null=False, unique=True)
