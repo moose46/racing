@@ -111,7 +111,6 @@ def load_results(race_list):
         if Race.objects.filter(race_date=race.race_date).exists():
             load_results_file(race)
 
-    pass
 
 
 def look_up_driver(driver_name):
