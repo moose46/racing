@@ -1,12 +1,12 @@
-
 """
 python manage.py runscript load_all
 
 """
-from collections import namedtuple
+
 import csv
 import os
 import re
+from collections import namedtuple
 from datetime import datetime
 from pathlib import Path
 from venv import logger
@@ -57,6 +57,7 @@ def check_env(dir_name):
     if Path.exists(dir_name):
         race_list = []
         for f in os.listdir(dir_name):
+
             if f.__contains__("results_"):
                 race_date = RaceData(f)
                 race_list.append(race_date)
@@ -109,10 +110,11 @@ def load_results(race_list):
             load_results_file(race)
 
 
-
 def look_up_driver(driver_name):
     try:
-        return Person.objects.get(name=driver_name, role=Role.objects.get(name="Driver"))
+        return Person.objects.get(
+            name=driver_name, role=Role.objects.get(name="Driver")
+        )
 
     except Person.DoesNotExist as e:
         driver = Person()
@@ -124,6 +126,7 @@ def look_up_driver(driver_name):
         driver.save()
         return driver
 
+
 def look_up_manufacturer(manufacturer_name):
     try:
         return AutoManufacturer.objects.get(name=manufacturer_name)
@@ -132,14 +135,15 @@ def look_up_manufacturer(manufacturer_name):
         auto_manufacturer.name = manufacturer_name
         auto_manufacturer.save()
         return auto_manufacturer
-    
+
+
 def load_results_file(race):
     print(f"loading... {race}")
     with open(race.src_file_name) as f:
         reader = csv.reader(f, delimiter="\t")
         RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
-        the_race = Race.objects.get(race_date = race.race_date)
-        if RaceResult.objects.filter(race = the_race).exists():
+        the_race = Race.objects.get(race_date=race.race_date)
+        if RaceResult.objects.filter(race=the_race).exists():
             print(f"{the_race} is already loaded!")
             return
         for header in reader:

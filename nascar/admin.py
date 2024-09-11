@@ -38,6 +38,7 @@ class TeamAdmin(admin.ModelAdmin):
 @admin.register(Race)
 class RaceAdmin(admin.ModelAdmin):
     list_display = ["uname", "track", "race_date"]
+    ordering = ["-race_date"]
 
     def uname(self, instance):
         return string.capwords(instance.name)
@@ -54,9 +55,14 @@ class PersonInLine(admin.TabularInline):
 
 @admin.register(Person)
 class PersonAdmin(admin.ModelAdmin):
+    list_display = ["name", "show_website"]
     list_filter = ["role"]
     inlines = [PersonInLine]
-    exclude = ["team", "slug"]
+    exclude = ["slug"]
+    ordering = ["name"]
+
+    def show_website(self, instance):
+        return format_html("<a href='{url}'>{url}</a>", url=instance.website)
 
 
 @admin.register(Track)
