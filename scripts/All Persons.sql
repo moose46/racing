@@ -1,5 +1,5 @@
 
-select a.name, ro.name, a.website, slug, t.name, t.website, t.[owner]
+select a.name, ro.name as role, a.website, slug, t.name, t.website, t.[owner]
 from nascar_person as a,
 	nascar_person_role as pr,
 	nascar_role as ro,
@@ -7,3 +7,5 @@ from nascar_person as a,
 	nascar_person_team as pt
 where a.id = pr.person_id and pr.role_id = ro.id and t.id = pt.team_id and a.id = pt.person_id
 order by a.name
+-- select *
+-- from nascar_person

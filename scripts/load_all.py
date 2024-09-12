@@ -116,22 +116,25 @@ def look_up_person(person_name, role="Driver", update=False):
     try:
         if update == False:
             return Person.objects.get(name=person_name)
-        else:
-            person = Person.objects.get(name=person_name)
-            role = Role.objects.get(name=role)
-            person.role.aadd(role)
-            person.save()
-            return person
-
+        person = Person.objects.get(name=person_name)
+        role = Role.objects.get(name=role)
+        return _extracted_from_look_up_person_7(person, role)
     except Person.DoesNotExist as e:
         person = Person()
         # TODO: many to many insert
         role = Role.objects.get(name=role)
         person.name = person_name
         person.save()
-        person.role.add(role)
-        person.save()
+        return _extracted_from_look_up_person_7(person, role)
+
+
+# TODO Rename this here and in `look_up_person`
+def _extracted_from_look_up_person_7(person: Person, role):
+    if person.role == role:
         return person
+    person.role.add(role)
+    person.save()
+    return person
 
 
 def look_up_driver(driver_name, role="Driver"):
