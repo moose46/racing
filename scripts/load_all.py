@@ -19,7 +19,7 @@ date_format = "%m-%d-%Y"
 source_txt_race_file = (
     Path(__file__).resolve().parent.parent.parent / "beerme2" / "data"
 )
-target_csv_race_file = Path(__file__).resolve().parent.parent / "scripts" / "csv"
+source_csv_files = Path(__file__).resolve().parent.parent / "scripts" / "csv"
 
 
 class RaceData:
@@ -112,16 +112,36 @@ def load_results(race_list):
             load_results_file(race)
 
 
-def look_up_driver(driver_name):
+def look_up_person(person_name, role="Driver", update=False):
     try:
-        return Person.objects.get(
-            name=driver_name, role=Role.objects.get(name="Driver")
-        )
+        if update == False:
+            return Person.objects.get(name=person_name)
+        else:
+            person = Person.objects.get(name=person_name)
+            role = Role.objects.get(name=role)
+            person.role.aadd(role)
+            person.save()
+            return person
+
+    except Person.DoesNotExist as e:
+        person = Person()
+        # TODO: many to many insert
+        role = Role.objects.get(name=role)
+        person.name = person_name
+        person.save()
+        person.role.add(role)
+        person.save()
+        return person
+
+
+def look_up_driver(driver_name, role="Driver"):
+    try:
+        return Person.objects.get(name=driver_name, role=Role.objects.get(name=role))
 
     except Person.DoesNotExist as e:
         driver = Person()
         # TODO: many to many insert
-        role = Role.objects.get(name="Driver")
+        role = Role.objects.get(name=role)
         driver.name = driver_name
         driver.save()
         driver.role.add(role)
@@ -172,6 +192,20 @@ def load_results_file(race):
                 exit()
 
 
+def load_person_teams():
+
+    print(source_csv_files)
+    with open(f"{source_csv_files}/persons.csv") as f:
+        reader = csv.reader(f, delimiter=",")
+        PersonInfo = namedtuple("PersonInfo", next(reader), rename=True)
+        for header in reader:
+            person_info = Person()
+            data = PersonInfo(*header)
+            print(f"{data.name}")
+            person = look_up_person(data.name, data.role, update=True)
+            print(person)
+
+
 def run():
     print(f"Hello World!")
     # the data files come from beer me
@@ -180,3 +214,4 @@ def run():
     load_tracks(race_list)
     load_races(race_list)
     load_results(race_list)
+    load_person_teams()

@@ -1,4 +1,5 @@
 use racing
-select * from nascar_person
+select name from nascar_track
+where name like 'W%'
 ORDER BY name
 GO

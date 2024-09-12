@@ -1,3 +1,4 @@
+
 select a.name, ro.name, a.website, slug, t.name, t.website, t.[owner]
 from nascar_person as a,
 	nascar_person_role as pr,
