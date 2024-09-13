@@ -1,5 +1,5 @@
 
-select a.name, ro.name as role, a.website, slug, t.name, t.website, t.[owner]
+select a.name, ro.name as role, a.website, slug, t.name as team, t.website as teamwebsite, t.[owner]
 from nascar_person as a,
 	nascar_person_role as pr,
 	nascar_role as ro,

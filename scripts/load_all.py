@@ -13,7 +13,7 @@ from venv import logger
 
 from django.contrib.auth.models import User
 
-from nascar.models import AutoManufacturer, Person, Race, RaceResult, Role, Track
+from nascar.models import AutoManufacturer, Person, Race, RaceResult, RacingSeries, Role, Track, Team
 
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
@@ -195,6 +195,19 @@ def load_results_file(race):
                 exit()
 
 
+def look_up_team(name, owner=""):
+    try:
+        return Team.objects.get(name=name)
+    except Team.DoesNotExist as e:
+        team = Team()
+        team.name = name
+        team.owner = owner
+        # TODO: look up racing series and insert if not there
+        team.series = RacingSeries.objects.get(name='NASCAR')
+        team.save()
+        return team
+
+
 def load_person_teams():
 
     print(source_csv_files)
@@ -206,8 +219,14 @@ def load_person_teams():
             data = PersonInfo(*header)
             print(f"{data.name}")
             person = look_up_person(data.name, data.role, update=True)
-            print(person)
-
+            person.website = data.website
+            person.slug = data.slug
+            person.save()
+            team = look_up_team(data.team, data.owner)
+            team.website = data.teamwebsite
+            team.save()
+            person.team.add(team)
+            person.save()
 
 def run():
     print(f"Hello World!")
