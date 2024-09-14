@@ -4,6 +4,7 @@ python manage.py runscript load_all
 """
 
 import csv
+import logging
 import os
 import re
 from collections import namedtuple
@@ -20,6 +21,17 @@ source_txt_race_file = (
     Path(__file__).resolve().parent.parent.parent / "beerme2" / "data"
 )
 source_csv_files = Path(__file__).resolve().parent.parent / "scripts" / "csv"
+
+# logger = logging.getLogger(__name__)
+logging.basicConfig(
+    filename=Path(__file__).resolve().parent.parent
+    / "scripts"
+    / "logs"
+    / "log_results_races.txt",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    filemode="w",
+)
 
 
 class RaceData:
@@ -54,7 +66,8 @@ class RaceData:
 
 
 def check_env(dir_name):
-    """when passed a directory name, it
+    """
+    when passed a directory name, it
     returns a list of race results file names
     """
     if Path.exists(dir_name):
@@ -63,12 +76,17 @@ def check_env(dir_name):
             if f.__contains__("results_"):
                 race_date = RaceData(f)
                 race_list.append(race_date)
+        logging.info(f"Found {len(race_list)} Race results")
         return race_list
     print(f"{dir_name} does not Exist, exiting...!")
     exit()
 
 
-def load_tracks(race_list):
+def load_tracks(race_list: list):
+    """
+    Passed a list of races and checks to see if the track exists
+    If the track does not exist, the track is inserted intp the database and logged
+    """
     user = User.objects.get(pk=1)
     for race in race_list:
         if not Track.objects.filter(name=race.race_track).exists():
@@ -76,6 +94,7 @@ def load_tracks(race_list):
             track.name = race.race_track
             track.user = user
             track.save()
+            logging.info(f"+ Track {track}")
 
 
 def load_races(race_list):
@@ -210,7 +229,7 @@ def load_person_teams():
 
 
 def run():
-    print(f"Hello World!")
+    logging.info("Hello World")
     # the data files come from beer me
     race_list = check_env(source_txt_race_file)
     load_roles()

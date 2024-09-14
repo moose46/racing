@@ -2,4 +2,3 @@ db*
 *.cpython*
 migrations*
 scripts/logs/log_results_races.txt
-
