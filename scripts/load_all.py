@@ -14,7 +14,16 @@ from venv import logger
 
 from django.contrib.auth.models import User
 
-from nascar.models import AutoManufacturer, Person, Race, RaceResult, RacingSeries, Role, Track, Team
+from nascar.models import (
+    AutoManufacturer,
+    Person,
+    Race,
+    RaceResult,
+    RacingSeries,
+    Role,
+    Team,
+    Track,
+)
 
 date_format = "%m-%d-%Y"
 source_txt_race_file = (
@@ -74,11 +83,12 @@ def check_env(dir_name):
         race_list = []
         for f in os.listdir(dir_name):
             if f.__contains__("results_"):
-                race_date = RaceData(f)
+                race_date = RaceData(f, dir_name)
                 race_list.append(race_date)
-        logging.info(f"Found {len(race_list)} Race results")
+                logger.info(f)
+        logging.info(f"Found {len(race_list)} Race results in {dir_name}")
         return race_list
-    logging.log(f'{dir_name} does not exist! Fatal exiting...')
+    logging.debug(f"{dir_name} does not exist! Fatal exiting...")
     print(f"{dir_name} does not Exist, exiting...!")
     exit()
 
@@ -102,15 +112,20 @@ def load_races(race_list):
     user = User.objects.get(pk=1)
     for race in race_list:
         if not Race.objects.filter(race_date=race.race_date).exists():
+            print(f"Create race {race}")
             the_track = Track.objects.get(name=race.race_track)
             # print(f"{the_track}")
             race = Race()
             race.name = the_track.name
-            race.race_date = race.race_date
+            if race.race_date:
+                race.race_date = race.race_date
+            else:
+                print(f"load_races() -> Bad Race Date Information {the_track.name}")
+                exit()
             race.user = user
             race.track = the_track
             race.save()
-            logger.log(f"Created race {race}")
+            logger.debug(f"Created race {race}")
 
 
 def load_roles():
@@ -141,11 +156,12 @@ def look_up_person(person_name, role="Driver", update=False):
         role = Role.objects.get(name=role)
         return _extracted_from_look_up_person_7(person, role)
     except Person.DoesNotExist as e:
-        person = Person()
+        # person = Person()
         # TODO: many to many insert
         role = Role.objects.get(name=role)
         person.name = person_name
         person.save()
+        logger.debug(f"Created person {person} {__name__}")
         return _extracted_from_look_up_person_7(person, role)
 
 
@@ -170,7 +186,7 @@ def look_up_driver(driver_name, role="Driver"):
         driver.save()
         driver.role.add(role)
         driver.save()
-        logger.log(f"Created {role} {driver}")
+        logger.debug(f"Created {role} {driver}")
         return driver
 
 
@@ -214,7 +230,7 @@ def load_results_file(race):
                 driver_results.save()
             except Exception as e:
                 print(f"Exiting {race} {e} {driver_results.driver}")
-                logger.log(f"Not found {race} {e} {driver_results.driver}")
+                logger.debug(f"Not found {race} {e} {driver_results.driver}")
                 exit()
 
 
@@ -226,9 +242,9 @@ def look_up_team(name, owner=""):
         team.name = name
         team.owner = owner
         # TODO: look up racing series and insert if not there
-        team.series = RacingSeries.objects.get(name='NASCAR')
+        team.series = RacingSeries.objects.get(name="NASCAR")
         team.save()
-        logger.log(f"Created team {team.name}")
+        logger.debug(f"Created team {team.name}")
         return team
 
 
@@ -252,6 +268,7 @@ def load_person_teams():
             team.save()
             person.team.add(team)
             person.save()
+
 
 def run():
     logging.info("Hello World")
