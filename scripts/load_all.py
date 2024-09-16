@@ -27,7 +27,7 @@ logging.basicConfig(
     filename=Path(__file__).resolve().parent.parent
     / "scripts"
     / "logs"
-    / "log_results_races.txt",
+    / "load_all.txt",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
     filemode="w",
@@ -78,6 +78,7 @@ def check_env(dir_name):
                 race_list.append(race_date)
         logging.info(f"Found {len(race_list)} Race results")
         return race_list
+    logging.log(f'{dir_name} does not exist! Fatal exiting...')
     print(f"{dir_name} does not Exist, exiting...!")
     exit()
 
@@ -102,13 +103,14 @@ def load_races(race_list):
     for race in race_list:
         if not Race.objects.filter(race_date=race.race_date).exists():
             the_track = Track.objects.get(name=race.race_track)
-            print(f"{the_track}")
-            driver_results = Race()
-            driver_results.name = the_track.name
-            driver_results.race_date = race.race_date
-            driver_results.user = user
-            driver_results.track = the_track
-            driver_results.save()
+            # print(f"{the_track}")
+            race = Race()
+            race.name = the_track.name
+            race.race_date = race.race_date
+            race.user = user
+            race.track = the_track
+            race.save()
+            logger.log(f"Created race {race}")
 
 
 def load_roles():
@@ -119,7 +121,7 @@ def load_roles():
             new_role.name = role
             new_role.save()
             logger.info(f"Added New Role {role}")
-            print(f"Added New Role {role}")
+            # print(f"Added New Role {role}")
 
 
 def load_results(race_list):
@@ -168,6 +170,7 @@ def look_up_driver(driver_name, role="Driver"):
         driver.save()
         driver.role.add(role)
         driver.save()
+        logger.log(f"Created {role} {driver}")
         return driver
 
 
@@ -182,13 +185,13 @@ def look_up_manufacturer(manufacturer_name):
 
 
 def load_results_file(race):
-    print(f"loading... {race}")
+    # print(f"loading... {race}")
     with open(race.src_file_name) as f:
         reader = csv.reader(f, delimiter="\t")
         RaceInfo = namedtuple("RaceInfo", next(reader), rename=True)
         the_race = Race.objects.get(race_date=race.race_date)
         if RaceResult.objects.filter(race=the_race).exists():
-            print(f"{the_race} is already loaded!")
+            # print(f"{the_race} is already loaded!")
             return
         for header in reader:
             driver_results = RaceResult()
@@ -211,6 +214,7 @@ def load_results_file(race):
                 driver_results.save()
             except Exception as e:
                 print(f"Exiting {race} {e} {driver_results.driver}")
+                logger.log(f"Not found {race} {e} {driver_results.driver}")
                 exit()
 
 
@@ -224,19 +228,21 @@ def look_up_team(name, owner=""):
         # TODO: look up racing series and insert if not there
         team.series = RacingSeries.objects.get(name='NASCAR')
         team.save()
+        logger.log(f"Created team {team.name}")
         return team
 
 
 def load_person_teams():
 
-    print(source_csv_files)
+    # print(source_csv_files)
+    logger.debug(f"Source of the data is {source_csv_files}")
     with open(f"{source_csv_files}/persons.csv") as f:
         reader = csv.reader(f, delimiter=",")
         PersonInfo = namedtuple("PersonInfo", next(reader), rename=True)
         for header in reader:
             person_info = Person()
             data = PersonInfo(*header)
-            print(f"{data.name}")
+            # print(f"{data.name}")
             person = look_up_person(data.name, data.role, update=True)
             person.website = data.website
             person.slug = data.slug

@@ -85,7 +85,7 @@ class Person(Base):
         self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
         self.slug = slugify(f"{self.name}")
-        print(self.slug)
+        # print(self.slug)
         if update_fields is not None and name in update_fields:
             update_fields = {"slug"}.union(update_fields)
         super().save(

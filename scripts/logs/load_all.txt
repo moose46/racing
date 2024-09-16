@@ -1,0 +1,3 @@
+2024-09-15 20:33:40,896 - INFO - Hello World
+2024-09-15 20:33:40,901 - INFO - Found 148 Race results
+2024-09-15 20:33:41,729 - DEBUG - Source of the data is C:\Users\me\VsCodeProjects\racing\scripts\csv
