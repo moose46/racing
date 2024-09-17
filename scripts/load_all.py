@@ -42,6 +42,16 @@ logging.basicConfig(
     filemode="w",
 )
 
+from datetime import datetime
+
+def is_valid_date(date_str):
+  # Checks if a date string is valid ISO 8601 format
+  # Returns True if valid, False otherwise
+  try:
+    datetime.fromisoformat(date_str)
+    return True
+  except ValueError:
+    return False
 
 class RaceData:
     """_summary_
@@ -56,6 +66,9 @@ class RaceData:
         self.race_date = datetime.strptime(self.race_date, "%m-%d-%Y").strftime(
             "%Y-%m-%d"
         )
+        if not is_valid_date(self.race_date):
+            logger.debug(f"Bad date exiting {self.race_date} {self.file_name}")
+            exit()
         self._src_file_name = src_path / self.file_name
 
     @property
@@ -71,7 +84,7 @@ class RaceData:
         self._race_track = value
 
     def __str__(self):
-        return f"{self.race_date} - {self.race_track}"
+        return f"{self.race_date}"
 
 
 def check_env(dir_name):
@@ -115,17 +128,18 @@ def load_races(race_list):
             print(f"Create race {race}")
             the_track = Track.objects.get(name=race.race_track)
             # print(f"{the_track}")
-            race = Race()
-            race.name = the_track.name
+            the_race = Race()
+            the_race.name = the_track.name
+
             if race.race_date:
-                race.race_date = race.race_date
+                the_race.race_date = race.race_date
             else:
-                print(f"load_races() -> Bad Race Date Information {the_track.name}")
+                print(f"load_races() -> Bad Race Date Information {the_track.name} {race.race_date} {race}")
                 exit()
-            race.user = user
-            race.track = the_track
-            race.save()
-            logger.debug(f"Created race {race}")
+            the_race.user = user
+            the_race.track = the_track
+            the_race.save()
+            logger.debug(f"Created race {the_race}")
 
 
 def load_roles():
