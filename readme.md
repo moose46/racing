@@ -7,3 +7,5 @@
 ## Added all races query 9/2/2024
 
 ## 9/10/2024 on red-barn changed database connections to mssql pip install mssql-django, modified settings.py
+
+## Added practice postion to the race results table
