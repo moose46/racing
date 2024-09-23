@@ -157,7 +157,7 @@ class Race(Base):
     reload = models.BooleanField(default=False)
 
     def __str__(self) -> str:
-        return self.name
+        return f"{self.name} {self.race_date}"
 
     class META:
         unique_together = ("track", "race_date")
@@ -207,7 +207,8 @@ class RaceResult(Base):
     points = models.IntegerField(default=0)
     bonus = models.IntegerField(default=0)
     penality = models.IntegerField(default=0)
-
+    # From nascar the practice position
+    practice_pos = models.IntegerField(default=0)
     # TODO: Fix a solution for verbose_name
 
     class META:
@@ -215,3 +216,23 @@ class RaceResult(Base):
         verbose_name = "Race Results"
         ordering = ["driver__name"]
         unique_together = ["race", "driver"]
+
+
+class Practice(Base):
+    driver = models.ForeignKey(Person, on_delete=models.CASCADE)
+    best_time = models.FloatField(default=0.0)
+    best_speed = models.FloatField(default=0.0)
+    track = models.ForeignKey(Track, on_delete=models.CASCADE)
+    race = models.ForeignKey(Race, on_delete=models.CASCADE)
+    car_no = models.IntegerField(default=-1)
+
+    class META:
+        verbose_name = "Practice"
+
+
+def race_date(self):
+    return self.race.race_date
+
+
+def __str__(self):
+    return f"{self.track.name} {self.driver.name}"

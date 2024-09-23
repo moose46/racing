@@ -8,6 +8,7 @@ from django.utils.html import format_html
 from nascar.models import (
     AutoManufacturer,
     Person,
+    Practice,
     Race,
     RaceResult,
     RacingSeries,
@@ -78,6 +79,14 @@ class TrackAdmin(admin.ModelAdmin):
 class StateAdmin(admin.ModelAdmin):
     list_display = ["state_name"]
     list_filter = ("name",)
+
+
+@admin.register(Practice)
+class PracticeAdmin(admin.ModelAdmin):
+    list_display = ["track", "race_date", "driver", "best_time", "best_speed"]
+
+    def race_date(self, instance):
+        return instance.race.race_date
 
 
 @admin.register(RaceResult)

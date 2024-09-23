@@ -1,154 +1,153 @@
-2024-09-17 08:26:23,627 - INFO - Hello World
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_02-25-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_03-19-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_03-20-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_03-21-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_07-09-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_07-10-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_07-11-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Atlanta Motor Speedway_09-08-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Auto Club Speedway_02-26-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Auto Club Speedway_02-27-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_03-17-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_03-28-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_04-09-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_04-17-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_05-31-2020_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_09-16-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_09-18-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_09-18-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Bristol Motor Speedway_09-19-2020_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_05-26-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_05-28-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_05-29-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_05-30-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_10-08-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_10-09-2022_.txt
-2024-09-17 08:26:23,630 - INFO - results_Charlotte Motor Speedway_10-10-2021_.txt
-2024-09-17 08:26:23,630 - INFO - results_Chicago Street Race_07-02-2023_.txt
-2024-09-17 08:26:23,630 - INFO - results_Chicago Street Race_07-07-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Circuit of the Americas_03-24-2024_.txt
-2024-09-17 08:26:23,630 - INFO - results_Circuit of the Americas_03-26-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Circuit of the Americas_03-27-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Circuit of the Americas_05-23-2021.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_05-08-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_05-09-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_05-12-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_05-14-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_05-20-2020_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_09-01-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_09-03-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_09-04-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Darlington Raceway_09-05-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_02-14-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_02-18-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_02-19-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_02-20-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_02-21-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_08-24-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_08-26-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_08-28-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_08-28-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Daytona International Speedway_08-29-2020_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_04-28-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_04-30-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_05-02-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_05-05-2019_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_05-16-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_08-22-2020_.txt
-2024-09-17 08:26:23,631 - INFO - results_Dover Motor Speedway_10-06-2019_.txt
-2024-09-17 08:26:23,631 - INFO - results_Homestead-Miami Speedway_02-28-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Homestead-Miami Speedway_10-22-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Homestead-Miami Speedway_10-23-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_indianaplois Motor Speedway_07-21-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Indianapolis Motor Speedway_07-31-2022_.txt
-2024-09-17 08:26:23,631 - INFO - results_Indianapolis Motor Speedway_08-13-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Indianapolis Motor Speedway_08-15-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Iowa Speedway_06-16-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Kansas Speedway_05-02-2021_.txt
-2024-09-17 08:26:23,631 - INFO - results_Kansas Speedway_05-05-2024_.txt
-2024-09-17 08:26:23,631 - INFO - results_Kansas Speedway_05-07-2023_.txt
-2024-09-17 08:26:23,631 - INFO - results_Kansas Speedway_05-11-2019_.txt
-2024-09-17 08:26:23,632 - INFO - results_Kansas Speedway_05-15-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Kansas Speedway_07-23-2020_.txt
-2024-09-17 08:26:23,632 - INFO - results_Kansas Speedway_09-10-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Kansas Speedway_09-11-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Kansas Speedway_10-24-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_03-03-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_03-05-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_03-06-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_03-07-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_09-26-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_10-15-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Las Vegas Motor Speedway_10-16-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_04-07-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_04-09-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_04-10-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_04-16-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_10-29-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_10-30-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Martinsville Speedway_10-31-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Michigan International Speedway_08-06-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Michigan International Speedway_08-07-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_michigan international speedway_08-18-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_Michigan International Speedway_08-22-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Nashville Superspeedway_06-20-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Nashville Superspeedway_06-25-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Nashville Superspeedway_06-26-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Nashville Superspeedway_06-30-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_New Hampshire Motor Speedway_06-23-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_New Hampshire Motor Speedway_07-17-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_New Hampshire Motor Speedway_07-17-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_New Hampshire Motor Speedway_07-18-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_03-10-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_03-12-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_03-13-2022_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_03-14-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_11-05-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_Phoenix Raceway_11-07-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_POCONO RACEWAY_06-27-2021_.txt
-2024-09-17 08:26:23,632 - INFO - results_pocono raceway_07-14-2024_.txt
-2024-09-17 08:26:23,632 - INFO - results_POCONO RACEWAY_07-23-2023_.txt
-2024-09-17 08:26:23,632 - INFO - results_POCONO RACEWAY_07-24-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_03-31-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_04-02-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_04-04-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_04-18-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_07-30-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_richmond Raceway_08-11-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_08-14-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Richmond Raceway_09-11-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Road America_07-03-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Road America_07-04-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sharon Speedway_07-23-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-06-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-09-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-10-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-11-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-23-2018_.txt
-2024-09-17 08:26:23,633 - INFO - results_Sonoma Raceway_06-23-2019_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Super Speedway_04-25-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_04-21-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_04-23-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_04-24-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_06-21-2020_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_10-01-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_10-02-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Talladega Superspeedway_10-03-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_04-14-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_05-22-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_09-24-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_09-25-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_10-17-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Texas Motor Speedway_10-25-2020_.txt
-2024-09-17 08:26:23,633 - INFO - results_Watkins Glen International_08-08-2021_.txt
-2024-09-17 08:26:23,633 - INFO - results_Watkins Glen International_08-20-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_Watkins Glen International_08-21-2022_.txt
-2024-09-17 08:26:23,633 - INFO - results_Watkins Glen International_09-15-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_World Wide Technology Raceway_06-02-2024_.txt
-2024-09-17 08:26:23,633 - INFO - results_World Wide Technology Raceway_06-04-2023_.txt
-2024-09-17 08:26:23,633 - INFO - results_World Wide Technology Raceway_06-05-2022_.txt
-2024-09-17 08:26:23,634 - INFO - Found 149 Race results in C:\Users\me\Documents\VisualCodeSource\beerme2\data
-2024-09-17 08:26:23,802 - DEBUG - Created race Watkins Glen International
-2024-09-17 08:26:24,154 - DEBUG - Created Driver Juan Pablo Montoya
-2024-09-17 08:26:24,171 - DEBUG - Source of the data is C:\Users\me\Documents\VisualCodeSource\racing\scripts\csv
+2024-09-16 21:24:56,558 - INFO - Hello World
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_02-25-2024_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_03-19-2023_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_03-20-2022_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_03-21-2021_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_07-09-2023_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_07-10-2022_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_07-11-2021_.txt
+2024-09-16 21:24:56,561 - INFO - results_Atlanta Motor Speedway_09-08-2024_.txt
+2024-09-16 21:24:56,561 - INFO - results_Auto Club Speedway_02-26-2023_.txt
+2024-09-16 21:24:56,561 - INFO - results_Auto Club Speedway_02-27-2022_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_03-17-2024_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_03-28-2021_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_04-09-2023_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_04-17-2022_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_05-20-2020_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_05-31-2020_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_09-16-2023_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_09-18-2021_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_09-18-2022_.txt
+2024-09-16 21:24:56,561 - INFO - results_Bristol Motor Speedway_09-19-2020_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_05-26-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_05-28-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_05-29-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_05-30-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_10-08-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_10-09-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Charlotte Motor Speedway_10-10-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Chicago Street Race_07-02-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Chicago Street Race_07-07-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Circuit of the Americas_03-24-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Circuit of the Americas_03-26-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Circuit of the Americas_03-27-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Circuit of the Americas_05-23-2021.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_05-08-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_05-09-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_05-12-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_05-14-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_05-20-2020_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_09-01-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_09-03-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_09-04-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Darlington Raceway_09-05-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_02-14-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_02-18-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_02-19-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_02-20-2022_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_02-21-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_08-24-2024_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_08-26-2023_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_08-28-2021_.txt
+2024-09-16 21:24:56,563 - INFO - results_Daytona International Speedway_08-28-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Daytona International Speedway_08-29-2020_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_04-28-2024_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_04-30-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_05-02-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_05-05-2019_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_05-16-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_08-22-2020_.txt
+2024-09-16 21:24:56,564 - INFO - results_Dover Motor Speedway_10-06-2019_.txt
+2024-09-16 21:24:56,564 - INFO - results_Homestead-Miami Speedway_02-28-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Homestead-Miami Speedway_10-22-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Homestead-Miami Speedway_10-23-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_indianaplois Motor Speedway_07-21-2024_.txt
+2024-09-16 21:24:56,564 - INFO - results_Indianapolis Motor Speedway_07-31-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Indianapolis Motor Speedway_08-13-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Indianapolis Motor Speedway_08-15-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Iowa Speedway_06-16-2024_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_05-02-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_05-05-2024_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_05-07-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_05-11-2019_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_05-15-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_07-23-2020_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_09-10-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_09-11-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Kansas Speedway_10-24-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_03-03-2024_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_03-05-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_03-06-2022_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_03-07-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_09-26-2021_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_10-15-2023_.txt
+2024-09-16 21:24:56,564 - INFO - results_Las Vegas Motor Speedway_10-16-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_04-07-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_04-09-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_04-10-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_04-16-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_10-29-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_10-30-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Martinsville Speedway_10-31-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Michigan International Speedway_08-06-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Michigan International Speedway_08-07-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_michigan international speedway_08-18-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_Michigan International Speedway_08-22-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Nashville Superspeedway_06-20-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Nashville Superspeedway_06-25-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Nashville Superspeedway_06-26-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Nashville Superspeedway_06-30-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_New Hampshire Motor Speedway_06-23-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_New Hampshire Motor Speedway_07-17-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_New Hampshire Motor Speedway_07-17-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_New Hampshire Motor Speedway_07-18-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_03-10-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_03-12-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_03-13-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_03-14-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_11-05-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_Phoenix Raceway_11-07-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_POCONO RACEWAY_06-27-2021_.txt
+2024-09-16 21:24:56,565 - INFO - results_pocono raceway_07-14-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_POCONO RACEWAY_07-23-2023_.txt
+2024-09-16 21:24:56,565 - INFO - results_POCONO RACEWAY_07-24-2022_.txt
+2024-09-16 21:24:56,565 - INFO - results_Richmond Raceway_03-31-2024_.txt
+2024-09-16 21:24:56,565 - INFO - results_Richmond Raceway_04-02-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_Richmond Raceway_04-04-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Richmond Raceway_04-18-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Richmond Raceway_07-30-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_richmond Raceway_08-11-2024_.txt
+2024-09-16 21:24:56,566 - INFO - results_Richmond Raceway_08-14-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Richmond Raceway_09-11-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Road America_07-03-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_road america_07-04-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_sharon speedway_07-23-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-06-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-09-2024_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-10-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-11-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-23-2018_.txt
+2024-09-16 21:24:56,566 - INFO - results_Sonoma Raceway_06-23-2019_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Super Speedway_04-25-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_04-21-2024_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_04-23-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_04-24-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_06-21-2020_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_10-01-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_10-02-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Talladega Superspeedway_10-03-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_04-14-2024_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_05-22-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_09-24-2023_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_09-25-2022_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_10-17-2021_.txt
+2024-09-16 21:24:56,566 - INFO - results_Texas Motor Speedway_10-25-2020_.txt
+2024-09-16 21:24:56,567 - INFO - results_Watkins Glen International_08-08-2021_.txt
+2024-09-16 21:24:56,567 - INFO - results_Watkins Glen International_08-20-2023_.txt
+2024-09-16 21:24:56,567 - INFO - results_Watkins Glen International_08-21-2022_.txt
+2024-09-16 21:24:56,567 - INFO - results_Watkins Glen International_09-15-2024_.txt
+2024-09-16 21:24:56,567 - INFO - results_World Wide Technology Raceway_06-02-2024_.txt
+2024-09-16 21:24:56,567 - INFO - results_World Wide Technology Raceway_06-04-2023_.txt
+2024-09-16 21:24:56,567 - INFO - results_World Wide Technology Raceway_06-05-2022_.txt
+2024-09-16 21:24:56,567 - INFO - Found 150 Race results in C:\Users\me\VsCodeProjects\beerme2\data
+2024-09-16 21:24:57,301 - DEBUG - Source of the data is C:\Users\me\VsCodeProjects\racing\scripts\csv
