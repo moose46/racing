@@ -1,4 +1,5 @@
 import string
+from ast import mod
 from datetime import timezone
 from email import message
 from os import name
@@ -103,6 +104,7 @@ class Person(Base):
         ordering = ["name"]
         unique = ["name"]
 
+
 class State(Base):
     name = models.CharField(max_length=32)
 
@@ -140,8 +142,10 @@ class Track(Base):
     @property
     def track_name(self):
         return string.capwords(self.name)
+
     class META:
         unique = "name"
+
 
 class Race(Base):
     name = models.CharField(max_length=64)
@@ -149,11 +153,14 @@ class Race(Base):
     race_date = models.DateField(null=True)
     website = models.URLField(null=True, blank=True)
     laps = models.IntegerField(default=-1)
+    # If checked load_all will reload results data
+    reload = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return self.name
+
     class META:
-        unique_together = ('track','race_date')
+        unique_together = ("track", "race_date")
 
 
 # class Role(Base):
@@ -168,6 +175,7 @@ class AutoManufacturer(Base):
 
     class META:
         unique = "name"
+
 
 class RaceResult(Base):
     """One Race One Driver"""
@@ -206,4 +214,4 @@ class RaceResult(Base):
         verbose_name_plural = "Race Results"
         verbose_name = "Race Results"
         ordering = ["driver__name"]
-        unique_together = ["race","driver"]
+        unique_together = ["race", "driver"]
