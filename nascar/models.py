@@ -2,6 +2,7 @@ import string
 from ast import mod
 from datetime import timezone
 from email import message
+from importlib.resources import contents
 from os import name
 from tkinter import CASCADE
 from xml.dom import ValidationErr
@@ -20,6 +21,29 @@ class Base(models.Model):
 
     class Meta:
         abstract = True
+
+
+class RaceSettings(Base):
+    """
+    Source directory for all race results csv, .txt files are located
+
+    Args:
+        Base (_type_): _description_
+    """
+
+    source_directory = models.CharField(
+        max_length=128,
+        default="C:\\Users\\me\\Documents\\VisualCodeSource\\beerme2\\data\\",
+        name="src_dir",
+    )
+    contents = models.CharField(default="race_results", null=False, max_length=32)
+
+    @property
+    def src_dir(self):
+        return self.source_directory
+
+    def __str__(self) -> str:
+        return f"{self.src_dir}"
 
 
 class RacingSeries(Base):

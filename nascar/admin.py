@@ -11,6 +11,7 @@ from nascar.models import (
     Practice,
     Race,
     RaceResult,
+    RaceSettings,
     RacingSeries,
     Role,
     State,
@@ -23,6 +24,11 @@ from nascar.models import (
 
 @admin.register(AutoManufacturer)
 class AutoManufacturerAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(RaceSettings)
+class RaceSettinsAdmin(admin.ModelAdmin):
     pass
 
 
