@@ -1,4 +1,5 @@
 import string
+from ast import mod
 from datetime import timezone
 from email import message
 from os import name
@@ -152,6 +153,8 @@ class Race(Base):
     race_date = models.DateField(null=True)
     website = models.URLField(null=True, blank=True)
     laps = models.IntegerField(default=-1)
+    # If checked load_all will reload results data
+    reload = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f"{self.name} {self.race_date}"
