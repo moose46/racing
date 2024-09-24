@@ -70,13 +70,15 @@ class RaceData:
     When passed a file name, parse the track and race date from the file name
     """
 
-    def __init__(self, race_date=None) -> None:
+    def __init__(self, race: Race) -> None:
 
-        self._race_date = race_date
-        print(self.race_date)
-        file_race_date = str(self._race_date).split("-")
-        race = Race.objects.get(race_date=race_date)
+        self._race_date = race.race_date
+        # print(f"RaceData() -> {self.race_date}")
+        race = Race.objects.get(race_date=self._race_date)
+        self._race_track = race.track
+        # print(f"RaceData() -> {self._race_track}")
         # print(f"{r.race_date} {race_date}")
+        file_race_date = str(self._race_date).split("-")
         try:
             file_race_date = datetime.strptime(
                 str(self._race_date), "%Y-%m-%d"
@@ -84,10 +86,12 @@ class RaceData:
         except Exception as e:
             print(f"{self.race_date} {e}")
             exit()
+        # print(f"RaceData() -> {file_race_date}")
         # self._raw_race_date = raw_race_date
-        self._race_track = None
         self._reload = False
         self._src_path = RaceSettings.objects.get(contents="race_results")
+        # print(f"RaceData() -> {self._src_path}")
+        # exit()
         # self._file_name = pfile_name
         # self._race_track = pfile_name.split("_")[1]
         # self.race_date = re.findall(r"\d+-\d+-\d+", pfile_name)[0]
@@ -97,7 +101,7 @@ class RaceData:
         # if not is_valid_date(self.race_date):
         #     logger.debug(f"Bad date exiting {self.race_date} {self.file_name}")
         #     exit()
-        # self._src_file_name = src_path / self.file_name
+        self._src_file_name =  f"{self._src_path}results_{self._race_track}_{file_race_date}_.txt"
 
     def is_valid(self) -> Boolean:
         valid = False
@@ -110,9 +114,9 @@ class RaceData:
 
         return valid
 
-    @property
-    def raw_race_date(self):
-        return self._raw_race_date
+    # @property
+    # def raw_race_date(self):
+    #     return self._raw_race_date
 
     @property
     def reload(self):
@@ -132,7 +136,7 @@ class RaceData:
 
     @property
     def src_file_name(self):
-        return f"{self._src_path}\\{self._file_name}"
+        return self._src_file_name
 
     @property
     def race_track(self):
@@ -143,7 +147,7 @@ class RaceData:
         self._race_track = value
 
     def __str__(self):
-        return f"race_date={self.race_date}\nraw_race_date={self.raw_race_date}"
+        return f"race_date={self.race_date}"
 
 
 def check_env(dir_name):
@@ -172,7 +176,7 @@ def load_tracks(race_list: list):
     """
     user = User.objects.get(pk=1)
     for race in race_list:
-        print(f"load_tracks() -> {race.race_track}")
+        # print(f"load_tracks() -> {race.race_track}")
         if not Track.objects.filter(name=race.race_track).exists():
             track = Track()
             track.name = race.race_track
@@ -187,7 +191,7 @@ def load_races(race_list):
     for race in race_list:
         # if the race does not exist, create the race entry in the Race table
         print(f"load_races() -> race = {race}")
-        if not Race.objects.filter(race_date=race.raw_race_date).exists():
+        if not Race.objects.filter(race_date=race.race_date).exists():
             print(f"Create race {race.race_date} {race.raw_race_date}")
             the_track = Track.objects.get(name=race.race_track)
             # print(f"{the_track}")
@@ -373,16 +377,14 @@ def check_db():
     load_race_results = Race.objects.all()
     for race in load_race_results:
         race_data = RaceData(race)
-        # race_name = f"results_{r.track}_{race_date}_.txt"
-        # race_data.race_date = r.race_date
-    #     print(
-    #         f"Check_db -> {race_data.reload} {race_data.src_file_name} {race_data.raw_race_date}"
-    #     )
-    #     race_list.append(race_data)
-    #     CreateResultsFile(f"{source_txt_race_file}\\{race_data.src_file_name}")
+        # print(f"check_db() -> {race_data.src_file_name}")
+        # print(
+        #     f"Check_db -> {race_data.reload} {race_data.src_file_name}"
+        # )
+        race_list.append(race_data)
+        CreateResultsFile(race_data.src_file_name)
     # for x in race_list:
     #     print(f"Check_db() -> {x.file_name}")
-    exit()
     return race_list
 
 
@@ -401,7 +403,7 @@ def CreateResultsFile(results_file_name):
             with open(results_file_name, "w"):
                 pass
         except Exception as e:
-            print(f"{results_file_name} {e}")
+            print(f"{e}")
             exit()
 
 
