@@ -1,5 +1,7 @@
 """
 python manage.py runscript load_all
+Gets the race dates and location from the database.racing.nascar_race sql server
+
 
 """
 
@@ -87,36 +89,12 @@ class RaceData:
             print(f"{self.race_date} {e}")
             exit()
         # print(f"RaceData() -> {file_race_date}")
-        # self._raw_race_date = raw_race_date
         self._reload = False
         self._src_path = RaceSettings.objects.get(contents="race_results")
         # print(f"RaceData() -> {self._src_path}")
-        # exit()
-        # self._file_name = pfile_name
-        # self._race_track = pfile_name.split("_")[1]
-        # self.race_date = re.findall(r"\d+-\d+-\d+", pfile_name)[0]
-        # self.race_date = datetime.strptime(self.race_date, "%m-%d-%Y").strftime(
-        #     "%Y-%m-%d"
-        # )
-        # if not is_valid_date(self.race_date):
-        #     logger.debug(f"Bad date exiting {self.race_date} {self.file_name}")
-        #     exit()
-        self._src_file_name =  f"{self._src_path}results_{self._race_track}_{file_race_date}_.txt"
-
-    def is_valid(self) -> Boolean:
-        valid = False
-        if (
-            self._race_track and self._race_date and self._src_path and self._file_name
-        ) is not None:
-            valid = True
-        else:
-            valid = False
-
-        return valid
-
-    # @property
-    # def raw_race_date(self):
-    #     return self._raw_race_date
+        self._src_file_name = (
+            f"{self._src_path}results_{self._race_track}_{file_race_date}_.txt"
+        )
 
     @property
     def reload(self):
@@ -148,25 +126,6 @@ class RaceData:
 
     def __str__(self):
         return f"race_date={self.race_date}"
-
-
-def check_env(dir_name):
-    """
-    when passed a directory name, it
-    returns a list of race results file names
-    """
-    if Path.exists(dir_name):
-        race_list = []
-        for f in os.listdir(dir_name):
-            if f.__contains__("results_"):
-                race_date = RaceData(f, dir_name)
-                race_list.append(race_date)
-                logger.info(f)
-        logging.info(f"Found {len(race_list)} Race results in {dir_name}")
-        return race_list
-    logging.debug(f"{dir_name} does not exist! Fatal exiting...")
-    print(f"{dir_name} does not Exist, exiting...!")
-    exit()
 
 
 def load_tracks(race_list: list):
@@ -370,11 +329,13 @@ def load_person_teams():
 
 def check_db():
     """
-    Looks at the datbase Race table and checks the reload field. If checked the race is added to the list
+    Creates a ist of races and
+    looks at the Race table and checks the reload field.
+    If checked the race is added to the list
 
     """
     race_list = []
-    load_race_results = Race.objects.all()
+    load_race_results = Race.objects.filter(reload=True)
     for race in load_race_results:
         race_data = RaceData(race)
         # print(f"check_db() -> {race_data.src_file_name}")
@@ -385,6 +346,7 @@ def check_db():
         CreateResultsFile(race_data.src_file_name)
     # for x in race_list:
     #     print(f"Check_db() -> {x.file_name}")
+    print(f"Loading {len(race_list)} race(s).")
     return race_list
 
 
