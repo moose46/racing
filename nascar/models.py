@@ -179,6 +179,8 @@ class Race(Base):
     laps = models.IntegerField(default=-1)
     # If checked load_all will reload results data
     reload = models.BooleanField(default=False)
+    # creates a data results file in beerme2, resets after empty file has been created
+    create_results_file = models.BooleanField(default=True, name="create_results_file")
 
     def __str__(self) -> str:
         return f"{self.name} {self.race_date}"

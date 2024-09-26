@@ -326,7 +326,7 @@ def load_person_teams():
             person.team.add(team)
             person.save()
 
-
+from django.db.models import Q
 def check_db():
     """
     Creates a ist of races and
@@ -336,8 +336,11 @@ def check_db():
     """
     race_list = []
     load_race_results = Race.objects.filter(reload=True)
+    load_race_results = Race.objects.filter(Q(reload=True) | Q(create_results_file=True))
     for race in load_race_results:
         race_data = RaceData(race)
+        race.reload = False
+        race.save()
         # print(f"check_db() -> {race_data.src_file_name}")
         # print(
         #     f"Check_db -> {race_data.reload} {race_data.src_file_name}"
@@ -347,6 +350,7 @@ def check_db():
     # for x in race_list:
     #     print(f"Check_db() -> {x.file_name}")
     print(f"Loading {len(race_list)} race(s).")
+    exit()
     return race_list
 
 
