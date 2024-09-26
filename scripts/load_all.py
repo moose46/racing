@@ -340,6 +340,7 @@ def check_db():
     for race in load_race_results:
         race_data = RaceData(race)
         race.reload = False
+        race.create_results_file = False
         race.save()
         # print(f"check_db() -> {race_data.src_file_name}")
         # print(
@@ -350,7 +351,6 @@ def check_db():
     # for x in race_list:
     #     print(f"Check_db() -> {x.file_name}")
     print(f"Loading {len(race_list)} race(s).")
-    exit()
     return race_list
 
 
