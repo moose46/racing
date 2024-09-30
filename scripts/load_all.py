@@ -9,6 +9,8 @@ import csv
 import logging
 import os
 import re
+from importlib import reload
+
 import select
 from collections import namedtuple
 
@@ -157,7 +159,6 @@ def load_races(race_list):
             the_race = Race()
             the_race.name = the_track.name
             print(f"load_races() -> the_date = {race.race_date}")
-            exit()
             if is_valid_date(race.race_date):
                 the_race.race_date = race.race_date
             else:
@@ -278,7 +279,7 @@ def load_results_file(race):
                 driver_results.car_no = data.CAR
                 driver_results.manufacturer = look_up_manufacturer(data.MANUFACTURER)
                 driver_results.laps = data.LAPS
-                driver_results.start = data.START
+                driver_results.start_pos = data.START
                 driver_results.led = data.LED
                 driver_results.points = data.PTS
                 driver_results.bonus = data.BONUS
@@ -337,6 +338,7 @@ def check_db():
     race_list = []
     load_race_results = Race.objects.filter(reload=True)
     load_race_results = Race.objects.filter(Q(reload=True) | Q(create_results_file=True))
+    load_race_results = Race.objects.filter(reload=False)
     for race in load_race_results:
         race_data = RaceData(race)
         race.reload = False
@@ -347,30 +349,32 @@ def check_db():
         #     f"Check_db -> {race_data.reload} {race_data.src_file_name}"
         # )
         race_list.append(race_data)
-        CreateResultsFile(race_data.src_file_name)
+        CreateResultsFile(race_data)
     # for x in race_list:
     #     print(f"Check_db() -> {x.file_name}")
     print(f"Loading {len(race_list)} race(s).")
     return race_list
 
 
-def CreateResultsFile(results_file_name):
+def CreateResultsFile(race : RaceData) -> None:
     """
-    If filename exists just exit, else create a empty file with the race track and date
+    If filename exists just exit, else create an empty file with the race track and date
 
     Args:
-        results_file_name (_type_): _description_
+        race (_type_): _description_
     """
-    results_file = Path(results_file_name)
+    results_file = Path(race.src_file_name)
+    print(f"CreateResultsFile -> {race.src_file_name}")
     if not results_file.is_file():
-        print(f"CreateResultsFile -> {results_file_name}")
+        print(f"CreateResultsFile -> {race.src_file_name}")
         try:
             # Create an empty file
-            with open(results_file_name, "w"):
-                pass
+            # with open(results_file_name, "w"):
+            pass
         except Exception as e:
             print(f"{e}")
             exit()
+
 
 
 def run():
